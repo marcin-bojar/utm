@@ -1,0 +1,102 @@
+
+/*-------------------*/
+/*   BASIC SETUP    -*/
+/*-------------------*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #777;
+}
+
+/*-------------------*/
+/*   HEADER         -*/
+/*-------------------*/
+
+
+
+.header {
+    background-image: linear-gradient(rgba(83, 83, 83, 0.75), rgba(0, 0, 0, 0.75)), url(../../vendors/img/silo.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+    
+}
+
+.text-box {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 75%;
+}
+
+.heading-primary {
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin-bottom: 60px;
+    }
+
+.heading-primary-main {
+    display: block;
+    font-size: 300%; 
+    font-weight: 100;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.heading-primary-sub {
+    display: block;
+    letter-spacing: 5px;   
+}
+
+.btn:link,
+.btn:visited {
+    padding: 15px 40px;
+    border-radius: 100px;
+    display: inline-block; 
+    margin-right: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #EE5A24;
+    transition: all .2s;
+}
+
+.btn:hover { 
+    transform: translateY(-3px);
+    background-color: #ed4e14
+}
+.btn-ghost:hover {
+    color: #fff;
+    border-color: #ed4e14;
+}
+.btn:active { transform: translateY(-1px);}
+
+.btn-full {
+    background-color: #EE5A24;
+    color: #fff;
+}
+
+.btn-ghost { color: #EE5A24; }
+
+
+
+
+
+
+
+
+
+
