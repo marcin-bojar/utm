@@ -24,18 +24,19 @@ body {
 
 
 .header {
-    background-image: linear-gradient(rgba(83, 83, 83, 0.75), rgba(0, 0, 0, 0.75)), url(../../vendors/img/silo.jpg);
+    background-image: linear-gradient(rgba(82, 82, 82, 0.83), rgba(0, 0, 0, 0.83)), url(../../vendors/img/silo.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: left;
     height: 100vh;
     color: #fff;
     position: relative;
     
 }
 
+
 .text-box {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -49,17 +50,11 @@ body {
     margin-bottom: 60px;
     }
 
-.heading-primary-main {
+.heading-logo {
     display: block;
-    font-size: 300%; 
-    font-weight: 100;
-    letter-spacing: 5px;
-    margin-bottom: 20px;
-}
-
-.heading-primary-sub {
-    display: block;
-    letter-spacing: 5px;   
+    margin: 0 auto 30px auto;
+    height: 120px;
+  
 }
 
 .btn:link,
@@ -90,6 +85,7 @@ body {
 }
 
 .btn-ghost { color: #EE5A24; }
+
 
 
 
