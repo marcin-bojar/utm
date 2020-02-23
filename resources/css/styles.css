@@ -4,17 +4,22 @@
 /*-------------------*/
 
 
-* {
+*,
+*::after,
+*::before {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
+
+html { font-size: 62.5%; }
 
 body {
     font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
+    font-weight: 300;
+    font-size: 2rem;
     color: #777;
+    box-sizing: border-box;
 }
 
 /*-------------------*/
@@ -24,7 +29,7 @@ body {
 
 
 .header {
-    background-image: linear-gradient(rgba(82, 82, 82, 0.83), rgba(0, 0, 0, 0.83)), url(../../vendors/img/silo.jpg);
+    background-image: linear-gradient(rgba(80, 80, 80, 0.83), rgba(0, 0, 0, 0.83)), url(../../vendors/img/silo.jpg);
     background-size: cover;
     background-position: left;
     height: 100vh;
@@ -46,38 +51,137 @@ body {
 .heading-primary {
     text-transform: uppercase;
     font-weight: 300;
-    letter-spacing: 5px;
-    margin-bottom: 60px;
+    letter-spacing: .5rem;
+    margin-bottom: 6rem;
+    backface-visibility: hidden;
     }
 
 .heading-logo {
     display: block;
-    margin: 0 auto 30px auto;
-    height: 120px;
-  
+    margin: 0 auto 3rem auto;
+    height: 12rem;
+    animation: 1s ease-out moveInInside 1s;
+    animation-fill-mode: backwards;
+}
+
+.heading-primary-sub { 
+    display: block;
+    animation: .5s ease-out moveInBottom 1.5s;
+    animation-fill-mode: backwards;
+ }
+
+.main-nav {
+    animation: .5s ease-out moveInUp 1.7s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInInside {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(4rem);
+        
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(4rem);
+        
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-4rem);
+        
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-4rem);
+        
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
 
 .btn:link,
 .btn:visited {
-    padding: 15px 40px;
-    border-radius: 100px;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
     display: inline-block; 
-    margin-right: 25px;
+    margin-right: 2.5rem;
     text-decoration: none;
     text-transform: uppercase;
-    border: 1px solid #EE5A24;
+    border: .1rem solid #EE5A24;
     transition: all .2s;
+    position: relative;
 }
 
-.btn:hover { 
-    transform: translateY(-3px);
-    background-color: #ed4e14
+.btn-heading::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    display: inline-block;
+    border: .1rem solid #EE5A24;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .3s;
 }
+
+.btn-heading:hover::after {
+    opacity: 0;
+    transform: scaleX(1.3) scaleY(1.7);
+}
+
+.btn:hover { transform: translateY(-3px); }
 .btn-ghost:hover {
     color: #fff;
     border-color: #ed4e14;
+    background-color: #EE5A24;
 }
-.btn:active { transform: translateY(-1px);}
+.btn:active { 
+    transform: translateY(-1px);
+    background-color: #ed4e14
+}
+
 
 .btn-full {
     background-color: #EE5A24;
@@ -85,6 +189,43 @@ body {
 }
 
 .btn-ghost { color: #EE5A24; }
+
+.btn-full.btn-heading {
+    animation: .5s ease-out moveInLeft 1.7s;
+    animation-fill-mode: backwards;
+}
+
+.btn-ghost.btn-heading {
+    animation: .5s ease-out moveInRight 1.7s;
+    animation-fill-mode: backwards;
+}
+
+.main-nav {
+    display: flex;
+    list-style: none;  
+    justify-content: flex-end;
+}
+
+.main-nav li {
+    font-size: 90%;
+    margin: 4rem 4rem;
+    
+}
+.main-nav li:active { transform: translateY(1px);}
+
+.main-nav li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 1.5rem;
+    padding: 1.5rem .5rem;
+    color: rgb(255, 255, 255);
+    border: .2rem transparent;
+    transition: border-bottom .2s;
+}
+
+.main-nav li a:hover { border-bottom: .2rem solid #EE5A24; }
+
+
 
 
 
