@@ -158,13 +158,16 @@ body {
     padding: 1.5rem 4rem;
     border-radius: 10rem;
     display: inline-block;
-    border: .1rem solid #EE5A24;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     transition: all .3s;
 }
+
+.btn-full.btn-heading::after { background-color: #EE5A24; }
+.btn-ghost.btn-heading::after { border: 1px solid #EE5A24; }
+
 
 .btn-heading:hover::after {
     opacity: 0;
