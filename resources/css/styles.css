@@ -39,7 +39,7 @@ body {
 }
 
 
-.text-box {
+.header__text-box {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -56,7 +56,7 @@ body {
     backface-visibility: hidden;
     }
 
-.heading-logo {
+.heading-primary__logo {
     display: block;
     margin: 0 auto 3rem auto;
     height: 12rem;
@@ -64,16 +64,12 @@ body {
     animation-fill-mode: backwards;
 }
 
-.heading-primary-sub { 
+.heading-primary--sub { 
     display: block;
     animation: .5s ease-out moveInBottom 1.5s;
     animation-fill-mode: backwards;
  }
 
-.main-nav {
-    animation: .5s ease-out moveInUp 1.7s;
-    animation-fill-mode: backwards;
-}
 
 @keyframes moveInInside {
     0% {
@@ -151,7 +147,7 @@ body {
     position: relative;
 }
 
-.btn-heading::after {
+.btn--animated::after {
     content: "";
     height: 100%;
     width: 100%;
@@ -165,17 +161,13 @@ body {
     transition: all .3s;
 }
 
-.btn-full.btn-heading::after { background-color: #EE5A24; }
-.btn-ghost.btn-heading::after { border: 1px solid #EE5A24; }
-
-
-.btn-heading:hover::after {
+.btn--animated:hover::after {
     opacity: 0;
     transform: scaleX(1.3) scaleY(1.7);
 }
 
 .btn:hover { transform: translateY(-3px); }
-.btn-ghost:hover {
+.btn--ghost:hover {
     color: #fff;
     border-color: #ed4e14;
     background-color: #EE5A24;
@@ -186,37 +178,42 @@ body {
 }
 
 
-.btn-full {
+.btn--full {
     background-color: #EE5A24;
     color: #fff;
 }
 
-.btn-ghost { color: #EE5A24; }
+.btn--ghost { color: #EE5A24; }
 
-.btn-full.btn-heading {
+.btn--full.btn--animated {
     animation: .5s ease-out moveInLeft 1.7s;
     animation-fill-mode: backwards;
 }
 
-.btn-ghost.btn-heading {
+.btn--ghost.btn--animated {
     animation: .5s ease-out moveInRight 1.7s;
     animation-fill-mode: backwards;
 }
 
-.main-nav {
+.btn--full.btn--animated::after { background-color: #EE5A24; }
+.btn--ghost.btn--animated::after { border: 1px solid #EE5A24; }
+
+.nav__main {
     display: flex;
     list-style: none;  
     justify-content: flex-end;
+    animation: .5s ease-out moveInUp 1.7s;
+    animation-fill-mode: backwards;
 }
 
-.main-nav li {
+.nav__main li {
     font-size: 90%;
     margin: 4rem 4rem;
     
 }
-.main-nav li:active { transform: translateY(1px);}
+.nav__main li:active { transform: translateY(1px);}
 
-.main-nav li a {
+.nav__main li a {
     text-transform: uppercase;
     text-decoration: none;
     margin-right: 1.5rem;
@@ -226,7 +223,7 @@ body {
     transition: border-bottom .2s;
 }
 
-.main-nav li a:hover { border-bottom: .2rem solid #EE5A24; }
+.nav__main li a:hover { border-bottom: .2rem solid #EE5A24; }
 
 
 
