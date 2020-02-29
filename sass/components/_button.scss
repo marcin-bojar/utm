@@ -21,25 +21,23 @@
 
     &--full {
         background-color: $color-primary-orange;
-        color: #fff;
+        color: $color-white;
     }
 
     &--ghost { 
+        backface-visibility: hidden;
         color: $color-primary-orange;
        
         &:hover {
-            color: #fff;
+            color: $color-white;
             background-color: $color-primary-orange;
         }
 
         &:active { background-color: $color-dark-orange; }
     }
     
-    
-
-
-
     &--animated::after {
+        backface-visibility: hidden;
         content: "";
         height: 100%;
         width: 100%;

@@ -55,16 +55,52 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 2rem;
-  color: #777; }
+  color: #555; }
 
 .heading-primary {
   text-transform: uppercase;
+  font-size: 200%;
   font-weight: 300;
   letter-spacing: .5rem;
-  margin-bottom: 6rem;
   backface-visibility: hidden;
   animation: .5s ease-out moveInBottom 1.5s;
   animation-fill-mode: backwards; }
+
+.heading-secondary {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 180%;
+  font-weight: 300;
+  letter-spacing: .2rem;
+  padding: .5rem 2rem;
+  color: #EE5A24;
+  text-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.6);
+  text-align: center;
+  transition: all .2s; }
+  .heading-secondary:hover {
+    transform: scale(1.05) translateY(-1rem);
+    text-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.8); }
+
+.heading-tertiary {
+  text-transform: uppercase;
+  font-size: 1.8rem; }
+
+.section-about__paragraph {
+  line-height: 145%;
+  width: 100%;
+  text-align: justify;
+  padding: 0 8rem;
+  border-left: 1px solid #EE5A24;
+  border-right: 1px solid #EE5A24; }
+
+.u-margin-bottom-mid {
+  margin-bottom: 6rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 12rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 3rem; }
 
 .btn:link, .btn:visited {
   padding: 1.5rem 4rem;
@@ -88,6 +124,7 @@ body {
   color: #fff; }
 
 .btn--ghost {
+  backface-visibility: hidden;
   color: #EE5A24; }
   .btn--ghost:hover {
     color: #fff;
@@ -96,6 +133,7 @@ body {
     background-color: #ed4e14; }
 
 .btn--animated::after {
+  backface-visibility: hidden;
   content: "";
   height: 100%;
   width: 100%;
@@ -124,10 +162,61 @@ body {
   .btn--ghost.btn--animated::after {
     border: 1px solid #EE5A24; }
 
+.feature-box {
+  background-color: #fff;
+  height: 40rem;
+  padding: 1rem 1.7rem;
+  margin: 0 2rem;
+  border-radius: 3px;
+  text-align: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+  transition: transform .2s;
+  font-size: 1.8rem; }
+  .feature-box__icon--1 {
+    margin: .2rem auto;
+    width: 60%; }
+  .feature-box__icon--2 {
+    margin: 1rem auto;
+    width: 50%; }
+  .feature-box__icon--3 {
+    margin: 1rem auto;
+    width: 50%; }
+  .feature-box__icon--4 {
+    width: 55%; }
+  .feature-box:hover {
+    transform: translateY(-0.5rem) scale(1.03);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6); }
+
 .logo--main {
   width: 65%;
   animation: 1s ease-out moveInInside 1s;
   animation-fill-mode: backwards; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 4rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 4rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 4rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 4rem) / 3) + 4rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 4rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 4rem) / 4) + 4rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 4rem) / 4) + 2 * 4rem); }
 
 .header {
   background-image: linear-gradient(rgba(80, 80, 80, 0.78), rgba(0, 0, 0, 0.78)), url(../../vendors/img/silo.jpg);
@@ -167,3 +256,8 @@ body {
     border-bottom: 0.2rem solid #EE5A24; }
   .main-nav li:active {
     transform: translateY(1px); }
+
+.section-about {
+  background-color: #f8f8f8;
+  padding: 8rem 0;
+  text-align: center; }
