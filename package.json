@@ -1,0 +1,22 @@
+{
+  "name": "utm",
+  "version": "1.0.0",
+  "description": "UTM webpage",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass -w sass/main.scss resources/css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcin-bojar/utm.git"
+  },
+  "author": "Marcin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcin-bojar/utm/issues"
+  },
+  "homepage": "https://github.com/marcin-bojar/utm#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

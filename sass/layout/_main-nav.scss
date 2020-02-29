@@ -1,0 +1,26 @@
+.main-nav {
+    display: flex;
+    list-style: none;  
+    justify-content: flex-end;
+    animation: .5s ease-out moveInUp 1.7s;
+    animation-fill-mode: backwards;
+
+    & li {
+        font-size: 90%;
+        margin: 4rem 4rem;
+        
+    }
+
+    & li a {
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-right: 1.5rem;
+        padding: 1.5rem .5rem;
+        color: rgb(255, 255, 255);
+        border: .2rem transparent;
+        transition: border-bottom .2s;
+    }
+    
+    & li a:hover { border-bottom: .2rem solid $color-primary-orange; }
+    & li:active { transform: translateY(1px); }
+}
