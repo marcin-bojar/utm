@@ -1,7 +1,8 @@
 .header {
     background-image: linear-gradient(rgba(80, 80, 80, 0.78), rgba(0, 0, 0, 0.78)), url(../../vendors/img/silo.jpg);
     background-size: cover;
-    background-position: left;
+    background-position: top;
+    background-attachment: fixed;
     height: 100vh;
     color: $color-white;
     position: relative;

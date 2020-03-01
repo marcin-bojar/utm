@@ -55,7 +55,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 2rem;
-  color: #555; }
+  color: #333; }
 
 .heading-primary {
   text-transform: uppercase;
@@ -83,15 +83,21 @@ body {
 
 .heading-tertiary {
   text-transform: uppercase;
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  backface-visibility: hidden; }
 
 .section-about__paragraph {
   line-height: 145%;
   width: 100%;
   text-align: justify;
-  padding: 0 8rem;
+  padding: 2rem 8rem;
   border-left: 1px solid #EE5A24;
-  border-right: 1px solid #EE5A24; }
+  border-right: 1px solid #EE5A24;
+  backface-visibility: hidden; }
+
+.countries {
+  list-style: none;
+  text-align: inherit; }
 
 .u-margin-bottom-mid {
   margin-bottom: 6rem; }
@@ -101,6 +107,15 @@ body {
 
 .u-margin-bottom-small {
   margin-bottom: 3rem; }
+
+.u-margin-top-small {
+  margin-top: 3rem; }
+
+.u-margin-top-mid {
+  margin-top: 6rem; }
+
+.u-margin-top-big {
+  margin-top: 12rem; }
 
 .btn:link, .btn:visited {
   padding: 1.5rem 4rem;
@@ -164,7 +179,7 @@ body {
 
 .feature-box {
   background-color: #fff;
-  height: 40rem;
+  height: 41rem;
   padding: 1rem 1.7rem;
   margin: 0 2rem;
   border-radius: 3px;
@@ -173,13 +188,13 @@ body {
   transition: transform .2s;
   font-size: 1.8rem; }
   .feature-box__icon--1 {
-    margin: .2rem auto;
+    margin: .5rem auto;
     width: 55%; }
   .feature-box__icon--2 {
     margin: 1rem auto;
     width: 50%; }
   .feature-box__icon--3 {
-    margin: .6rem auto;
+    margin: .5rem auto;
     width: 57%; }
   .feature-box__icon--4 {
     margin: 1rem auto;
@@ -222,7 +237,8 @@ body {
 .header {
   background-image: linear-gradient(rgba(80, 80, 80, 0.78), rgba(0, 0, 0, 0.78)), url(../../vendors/img/silo.jpg);
   background-size: cover;
-  background-position: left;
+  background-position: top;
+  background-attachment: fixed;
   height: 100vh;
   color: #fff;
   position: relative; }
@@ -262,3 +278,14 @@ body {
   background-color: #f8f8f8;
   padding: 8rem 0;
   text-align: center; }
+
+.section-where {
+  padding: 8rem 0;
+  text-align: center;
+  background-color: #fbfbfb; }
+  .section-where__flag {
+    width: 35%;
+    margin: .7rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4); }
+  .section-where__PL {
+    width: 78%; }

@@ -3,3 +3,19 @@
     padding: 8rem 0;
     text-align: center;
 }
+
+.section-where {
+    padding: 8rem 0;
+    text-align: center;
+    background-color: rgb(251, 251, 251);
+
+    &__flag {
+        width: 35%;
+        margin: .7rem;
+        box-shadow: 0 .5rem 1rem rgba($color-black, .4);  
+    }
+    &__PL {
+        width: 78%;
+    }
+}
+
