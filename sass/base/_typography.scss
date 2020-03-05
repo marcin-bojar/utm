@@ -7,7 +7,7 @@ body {
 
 .heading-primary {
     text-transform: uppercase;
-    font-size: 200%;
+    font-size: 4rem;
     font-weight: 300;
     letter-spacing: .5rem;
     backface-visibility: hidden;
@@ -20,7 +20,7 @@ body {
 .heading-secondary {
     display: inline-block;
     text-transform: uppercase;
-    font-size: 180%;
+    font-size: 3.6rem;
     font-weight: 300;
     letter-spacing: .2rem;
     padding: .5rem 2rem;
@@ -49,16 +49,9 @@ body {
     padding: 2rem 8rem;
     border-left: 1px solid $color-primary-orange;
     border-right: 1px solid $color-primary-orange;
-    backface-visibility: hidden;
-
 }
 
 .paragraph {
-    
-}
-
-.countries {
-    list-style: none;
-    text-align: inherit;
+    line-height: 145%;
     
 }

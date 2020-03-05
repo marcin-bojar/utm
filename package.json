@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/marcin-bojar/utm#readme",
   "dependencies": {
-    "node-sass": "^4.13.1"
+    "node-sass": "^4.13.1",
+    "normalize.css": "^8.0.1"
   }
 }

@@ -49,7 +49,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility; }
 
 body {
   font-family: "Lato", sans-serif;
@@ -59,7 +60,7 @@ body {
 
 .heading-primary {
   text-transform: uppercase;
-  font-size: 200%;
+  font-size: 4rem;
   font-weight: 300;
   letter-spacing: .5rem;
   backface-visibility: hidden;
@@ -69,7 +70,7 @@ body {
 .heading-secondary {
   display: inline-block;
   text-transform: uppercase;
-  font-size: 180%;
+  font-size: 3.6rem;
   font-weight: 300;
   letter-spacing: .2rem;
   padding: .5rem 2rem;
@@ -92,12 +93,10 @@ body {
   text-align: justify;
   padding: 2rem 8rem;
   border-left: 1px solid #EE5A24;
-  border-right: 1px solid #EE5A24;
-  backface-visibility: hidden; }
+  border-right: 1px solid #EE5A24; }
 
-.countries {
-  list-style: none;
-  text-align: inherit; }
+.paragraph {
+  line-height: 145%; }
 
 .u-margin-bottom-mid {
   margin-bottom: 6rem; }
@@ -117,6 +116,9 @@ body {
 .u-margin-top-big {
   margin-top: 12rem; }
 
+.u-text-center {
+  text-align: center; }
+
 .btn:link, .btn:visited {
   padding: 1.5rem 4rem;
   border-radius: 10rem;
@@ -124,6 +126,7 @@ body {
   margin-right: 2.5rem;
   text-decoration: none;
   text-transform: uppercase;
+  font-weight: 300;
   transition: all .2s;
   position: relative; }
 
@@ -179,29 +182,30 @@ body {
 
 .feature-box {
   background-color: #fff;
-  height: 41rem;
+  height: 42rem;
   padding: 1rem 1.7rem;
   margin: 0 2rem;
   border-radius: 3px;
   text-align: center;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transition: transform .2s;
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  font-weight: 300; }
   .feature-box__icon--1 {
-    margin: .5rem auto;
+    margin-bottom: .5rem;
     width: 55%; }
   .feature-box__icon--2 {
-    margin: 1rem auto;
+    margin-bottom: 1rem;
     width: 50%; }
   .feature-box__icon--3 {
-    margin: .5rem auto;
+    margin-bottom: -.5rem;
     width: 57%; }
   .feature-box__icon--4 {
-    margin: 1rem auto;
+    margin-bottom: 1rem;
     width: 49%; }
   .feature-box:hover {
-    transform: translateY(-0.5rem) scale(1.03);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6); }
+    transform: scale(1.03) translateY(-1rem);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2); }
 
 .logo--main {
   width: 65%;
@@ -235,7 +239,7 @@ body {
     width: calc(3 * ((100% - 3 * 4rem) / 4) + 2 * 4rem); }
 
 .header {
-  background-image: linear-gradient(rgba(80, 80, 80, 0.78), rgba(0, 0, 0, 0.78)), url(../../vendors/img/silo.jpg);
+  background-image: linear-gradient(rgba(51, 51, 51, 0.4), rgba(0, 0, 0, 0.89)), url(../../vendors/img/silo.jpg);
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
@@ -249,8 +253,8 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     width: 75%; }
-    .header__text-box__logo {
-      margin-bottom: 2rem; }
+  .header__logo {
+    margin-bottom: 3rem; }
 
 .main-nav {
   display: flex;
@@ -260,7 +264,8 @@ body {
   animation-fill-mode: backwards; }
   .main-nav li {
     font-size: 90%;
-    margin: 4rem 4rem; }
+    font-weight: 300;
+    margin: 4rem; }
   .main-nav li a {
     text-transform: uppercase;
     text-decoration: none;
@@ -276,16 +281,22 @@ body {
 
 .section-about {
   background-color: #f8f8f8;
-  padding: 8rem 0;
-  text-align: center; }
+  padding: 8rem 0; }
 
 .section-where {
+  background-image: linear-gradient(rgba(251, 251, 251, 0.9), rgba(251, 251, 251, 0.9)), url(../../vendors/img/road-5.jpg);
+  background-blend-mode: screen;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   padding: 8rem 0;
-  text-align: center;
-  background-color: #fbfbfb; }
+  padding-bottom: 10rem;
+  text-align: center; }
   .section-where__flag {
+    opacity: .9;
     width: 35%;
     margin: .7rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4); }
   .section-where__PL {
+    opacity: .9;
     width: 78%; }

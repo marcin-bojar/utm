@@ -1,5 +1,5 @@
 .header {
-    background-image: linear-gradient(rgba(80, 80, 80, 0.78), rgba(0, 0, 0, 0.78)), url(../../vendors/img/silo.jpg);
+    background-image: linear-gradient(rgba($color-grey-dark, .4), rgba($color-black, .89)), url(../../vendors/img/silo.jpg);
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
@@ -14,9 +14,9 @@
         transform: translate(-50%, -50%);
         text-align: center;
         width: 75%;
-
-        &__logo {
-            margin-bottom: 2rem;
-        }
+    }
+    
+    &__logo {
+        margin-bottom: 3rem;
     }
 }
