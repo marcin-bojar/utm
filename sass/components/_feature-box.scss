@@ -1,8 +1,7 @@
 .feature-box {
     background-color: $color-white;
-    height: 42rem;
+    height: 44rem;
     padding: 1rem 1.7rem;
-    margin: 0 2rem;
     border-radius: 3px;
     text-align: center;
     box-shadow: 0 1rem 2rem rgba($color-black, .15);
@@ -14,19 +13,19 @@
 
         &--1 {
             margin-bottom: .5rem;
-            width: 55%;
+            width: 52%;
         }
         &--2 {
             margin-bottom: 1rem;
-            width:50%;
+            width:47%;
         }
         &--3 {
             margin-bottom: -.5rem;
-            width:57%;
+            width:54%;
         }
         &--4 {
             margin-bottom: 1rem;
-            width:49%;
+            width:46%;
         }
     }
     &:hover {

@@ -71,11 +71,11 @@ body {
   display: inline-block;
   text-transform: uppercase;
   font-size: 3.6rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: .2rem;
   padding: .5rem 2rem;
   color: #EE5A24;
-  text-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   text-align: center;
   transition: all .2s; }
   .heading-secondary:hover {
@@ -84,8 +84,7 @@ body {
 
 .heading-tertiary {
   text-transform: uppercase;
-  font-size: 1.8rem;
-  backface-visibility: hidden; }
+  font-size: 1.8rem; }
 
 .section-about__paragraph {
   line-height: 145%;
@@ -143,12 +142,12 @@ body {
 
 .btn--ghost {
   backface-visibility: hidden;
-  color: #EE5A24; }
+  color: #fff; }
   .btn--ghost:hover {
-    color: #fff;
-    background-color: #EE5A24; }
+    color: #333;
+    background-color: #fff; }
   .btn--ghost:active {
-    background-color: #ed4e14; }
+    background-color: #f8f8f8; }
 
 .btn--animated::after {
   backface-visibility: hidden;
@@ -178,13 +177,12 @@ body {
   animation: .5s ease-out moveInRight 1.7s;
   animation-fill-mode: backwards; }
   .btn--ghost.btn--animated::after {
-    border: 1px solid #EE5A24; }
+    border: 1px solid #fff; }
 
 .feature-box {
   background-color: #fff;
-  height: 42rem;
+  height: 44rem;
   padding: 1rem 1.7rem;
-  margin: 0 2rem;
   border-radius: 3px;
   text-align: center;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
@@ -193,16 +191,16 @@ body {
   font-weight: 300; }
   .feature-box__icon--1 {
     margin-bottom: .5rem;
-    width: 55%; }
+    width: 52%; }
   .feature-box__icon--2 {
     margin-bottom: 1rem;
-    width: 50%; }
+    width: 47%; }
   .feature-box__icon--3 {
     margin-bottom: -.5rem;
-    width: 57%; }
+    width: 54%; }
   .feature-box__icon--4 {
     margin-bottom: 1rem;
-    width: 49%; }
+    width: 46%; }
   .feature-box:hover {
     transform: scale(1.03) translateY(-1rem);
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2); }
@@ -239,7 +237,7 @@ body {
     width: calc(3 * ((100% - 3 * 4rem) / 4) + 2 * 4rem); }
 
 .header {
-  background-image: linear-gradient(rgba(51, 51, 51, 0.4), rgba(0, 0, 0, 0.89)), url(../../vendors/img/silo.jpg);
+  background-image: linear-gradient(rgba(100, 100, 100, 0.6), rgba(70, 70, 70, 0.6)), url(../../vendors/img/silo.jpg);
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
@@ -263,7 +261,7 @@ body {
   animation: .5s ease-out moveInUp 1.7s;
   animation-fill-mode: backwards; }
   .main-nav li {
-    font-size: 90%;
+    font-size: 1.6rem;
     font-weight: 300;
     margin: 4rem; }
   .main-nav li a {
@@ -280,23 +278,65 @@ body {
     transform: translateY(1px); }
 
 .section-about {
-  background-color: #f8f8f8;
+  background-color: #fff;
   padding: 8rem 0; }
 
 .section-where {
-  background-image: linear-gradient(rgba(251, 251, 251, 0.9), rgba(251, 251, 251, 0.9)), url(../../vendors/img/road-5.jpg);
-  background-blend-mode: screen;
+  background-image: linear-gradient(to bottom, #fcfcfc 0%, rgba(252, 252, 252, 0) 35%, rgba(252, 252, 252, 0) 80%, #fcfcfc 100%), linear-gradient(to right, #fcfcfc 0%, rgba(252, 252, 252, 0.7) 35%, rgba(252, 252, 252, 0.3) 50%, rgba(252, 252, 252, 0.7) 65%, #fcfcfc 100%), url(../../vendors/img/road-3.jpg);
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-position: 100% 55%;
   padding: 8rem 0;
   padding-bottom: 10rem;
   text-align: center; }
-  .section-where__flag {
-    opacity: .9;
-    width: 35%;
-    margin: .7rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4); }
-  .section-where__PL {
-    opacity: .9;
-    width: 78%; }
+
+.where__flag {
+  opacity: .9;
+  width: 35%;
+  margin: .7rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4); }
+
+.where__PL {
+  opacity: .9;
+  width: 78%; }
+
+.section-trucks {
+  padding: 8rem 0;
+  background-color: #fff; }
+
+.trucks {
+  display: flex;
+  align-items: center; }
+  .trucks__nr {
+    flex-shrink: 0;
+    font-size: 6rem;
+    text-align: center;
+    height: 15rem;
+    width: 15rem;
+    padding: 3rem;
+    margin-right: 5rem;
+    border-radius: 200px;
+    border: 2px solid #EE5A24;
+    color: #EE5A24; }
+  .trucks__heading {
+    display: block;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-right: 5rem; }
+  .trucks:not(:last-child) {
+    margin-bottom: 10rem; }
+
+.photo {
+  display: flex;
+  justify-content: center;
+  margin: 10rem auto;
+  width: 98%; }
+  .photo__1-4 {
+    width: 25%;
+    transition: all .4s;
+    filter: brightness(90%); }
+    .photo__1-4:not(:last-child) {
+      margin-right: .4rem; }
+    .photo__1-4:hover {
+      transform: translateY(-1rem) scale(1.05);
+      filter: brightness(100%);
+      z-index: 9999; }
