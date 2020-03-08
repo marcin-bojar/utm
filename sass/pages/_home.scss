@@ -1,38 +1,36 @@
 .section-about {
     background-color: $color-white;
-    padding: 8rem 0;
+    padding: 10rem 0;
 }
 
 .section-where {
     background-image: 
-                        linear-gradient(to bottom, rgba($color-grey-light-2, 1) 0%, rgba($color-grey-light-2, 0) 35%, rgba($color-grey-light-2, 0) 80%, rgba($color-grey-light-2, 1) 100% ),
+                        linear-gradient(to bottom, rgba($color-grey-light-2, 1) 0%, rgba($color-grey-light-2, .5) 27%, rgba($color-grey-light-2, .0) 40%, rgba($color-grey-light-2, 0) 75%, rgba($color-grey-light-2, 1) 100% ),
 
-                        linear-gradient(to right, rgba($color-grey-light-2, 1) 0%, rgba($color-grey-light-2, .7) 35%,  rgba($color-grey-light-2, .3) 50%, rgba($color-grey-light-2, .7) 65%, rgba($color-grey-light-2, 1) 100%),
+                        linear-gradient(to right, rgba($color-grey-light-2, 1) 0%, rgba($color-grey-light-2, .7) 35%,  rgba($color-grey-light-2, .3) 45%, rgba($color-grey-light-2, .3) 55%, rgba($color-grey-light-2, .7) 65%, rgba($color-grey-light-2, 1) 100%),
 
-                        url(../../vendors/img/road-3.jpg);
+                        url(../../vendors/img/map-1.jpg);
     background-size: cover;
-    background-position: 100% 55%;
-    padding: 8rem 0; 
+    background-position: top;
+    padding: 10rem 0; 
     padding-bottom: 10rem;
     text-align: center;
 }
 
 .where {
     &__flag {
-        opacity: .9;
         width: 35%;
         margin: .7rem;
         box-shadow: 0 .5rem 1rem rgba($color-black, .4);
     }
     
     &__PL {
-        opacity: .9;
         width: 78%;
     }
 }
 
 .section-trucks {
-    padding: 8rem 0;
+    padding: 10rem 0;
     background-color: $color-white;
 }
 
@@ -76,10 +74,12 @@
     margin: 10rem auto;
     width: 98%;
 
+    &:last-child {margin-bottom: 0;}
+
     &__1-4 {
         width: 25%;
         transition: all .4s;
-        filter: brightness(90%);
+        filter: brightness(75%);
 
         &:not(:last-child) { margin-right: .4rem; }
         
@@ -93,3 +93,48 @@
     
 }
 
+.section-contact {
+    margin: 4rem 2rem;
+    padding: 6rem 2rem;
+    border-radius: 3px;
+    background-color: $color-primary-orange;
+}
+
+.contact {
+    //position: relative;
+    //height: 50rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    &__heading { color: $color-white; }
+
+    &__details {
+        //position: absolute;
+       // top: 20%;
+        //right: 5%;
+        margin-right: 4rem;
+        width: 40%;
+        background-color: $color-white;
+        border-radius: 7px;
+    }
+
+    &__address {
+        width: 90%;
+        margin: 0 auto;
+        
+        font-weight: 700;
+        text-align: left;
+        padding: 2rem;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $color-primary-orange;
+            text-transform: uppercase;
+        }
+        
+    }
+
+    &__mail { text-transform: lowercase; }
+
+    
+}

@@ -75,7 +75,7 @@ body {
   letter-spacing: .2rem;
   padding: .5rem 2rem;
   color: #EE5A24;
-  text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  text-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
   text-align: center;
   transition: all .2s; }
   .heading-secondary:hover {
@@ -180,7 +180,7 @@ body {
     border: 1px solid #fff; }
 
 .feature-box {
-  background-color: #fff;
+  background-image: linear-gradient(to right bottom, rgba(231, 252, 231, 0.7), #fff);
   height: 44rem;
   padding: 1rem 1.7rem;
   border-radius: 3px;
@@ -188,7 +188,8 @@ body {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transition: transform .2s;
   font-size: 1.8rem;
-  font-weight: 300; }
+  font-weight: 300;
+  backface-visibility: hidden; }
   .feature-box__icon--1 {
     margin-bottom: .5rem;
     width: 52%; }
@@ -202,6 +203,7 @@ body {
     margin-bottom: 1rem;
     width: 46%; }
   .feature-box:hover {
+    background-image: linear-gradient(to right bottom, rgba(231, 252, 231, 0.2), rgba(216, 250, 216, 0.6));
     transform: scale(1.03) translateY(-1rem);
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2); }
 
@@ -237,7 +239,7 @@ body {
     width: calc(3 * ((100% - 3 * 4rem) / 4) + 2 * 4rem); }
 
 .header {
-  background-image: linear-gradient(rgba(100, 100, 100, 0.6), rgba(70, 70, 70, 0.6)), url(../../vendors/img/silo.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../vendors/img/scania-header.jpg);
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
@@ -261,7 +263,7 @@ body {
   animation: .5s ease-out moveInUp 1.7s;
   animation-fill-mode: backwards; }
   .main-nav li {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 300;
     margin: 4rem; }
   .main-nav li a {
@@ -279,28 +281,26 @@ body {
 
 .section-about {
   background-color: #fff;
-  padding: 8rem 0; }
+  padding: 10rem 0; }
 
 .section-where {
-  background-image: linear-gradient(to bottom, #fcfcfc 0%, rgba(252, 252, 252, 0) 35%, rgba(252, 252, 252, 0) 80%, #fcfcfc 100%), linear-gradient(to right, #fcfcfc 0%, rgba(252, 252, 252, 0.7) 35%, rgba(252, 252, 252, 0.3) 50%, rgba(252, 252, 252, 0.7) 65%, #fcfcfc 100%), url(../../vendors/img/road-3.jpg);
+  background-image: linear-gradient(to bottom, #fcfcfc 0%, rgba(252, 252, 252, 0.5) 27%, rgba(252, 252, 252, 0) 40%, rgba(252, 252, 252, 0) 75%, #fcfcfc 100%), linear-gradient(to right, #fcfcfc 0%, rgba(252, 252, 252, 0.7) 35%, rgba(252, 252, 252, 0.3) 45%, rgba(252, 252, 252, 0.3) 55%, rgba(252, 252, 252, 0.7) 65%, #fcfcfc 100%), url(../../vendors/img/map-1.jpg);
   background-size: cover;
-  background-position: 100% 55%;
-  padding: 8rem 0;
+  background-position: top;
+  padding: 10rem 0;
   padding-bottom: 10rem;
   text-align: center; }
 
 .where__flag {
-  opacity: .9;
   width: 35%;
   margin: .7rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4); }
 
 .where__PL {
-  opacity: .9;
   width: 78%; }
 
 .section-trucks {
-  padding: 8rem 0;
+  padding: 10rem 0;
   background-color: #fff; }
 
 .trucks {
@@ -330,13 +330,44 @@ body {
   justify-content: center;
   margin: 10rem auto;
   width: 98%; }
+  .photo:last-child {
+    margin-bottom: 0; }
   .photo__1-4 {
     width: 25%;
     transition: all .4s;
-    filter: brightness(90%); }
+    filter: brightness(75%); }
     .photo__1-4:not(:last-child) {
       margin-right: .4rem; }
     .photo__1-4:hover {
       transform: translateY(-1rem) scale(1.05);
       filter: brightness(100%);
       z-index: 9999; }
+
+.section-contact {
+  margin: 4rem 2rem;
+  padding: 6rem 2rem;
+  border-radius: 3px;
+  background-color: #EE5A24; }
+
+.contact {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start; }
+  .contact__heading {
+    color: #fff; }
+  .contact__details {
+    margin-right: 4rem;
+    width: 40%;
+    background-color: #fff;
+    border-radius: 7px; }
+  .contact__address {
+    width: 90%;
+    margin: 0 auto;
+    font-weight: 700;
+    text-align: left;
+    padding: 2rem; }
+    .contact__address:not(:last-child) {
+      border-bottom: 1px solid #EE5A24;
+      text-transform: uppercase; }
+  .contact__mail {
+    text-transform: lowercase; }

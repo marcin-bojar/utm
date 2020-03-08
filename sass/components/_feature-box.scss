@@ -1,5 +1,5 @@
 .feature-box {
-    background-color: $color-white;
+    background-image: linear-gradient(to right bottom, rgba(#e7fce7, .7), #fff );
     height: 44rem;
     padding: 1rem 1.7rem;
     border-radius: 3px;
@@ -8,6 +8,7 @@
     transition: transform .2s;
     font-size: 1.8rem;
     font-weight: 300;
+    backface-visibility: hidden;
     
     &__icon {
 
@@ -29,7 +30,8 @@
         }
     }
     &:hover {
-        transform: scale(1.03) translateY(-1rem);
+        background-image: linear-gradient(to right bottom, rgba(#e7fce7, .2),rgba(#d8fad8, .6));
+        transform: scale(1.03) translateY(-1rem) ;
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
     }
 
