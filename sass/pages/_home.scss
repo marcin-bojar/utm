@@ -4,12 +4,10 @@
 }
 
 .section-where {
-    background-image: 
-                        linear-gradient(to bottom, rgba($color-grey-light-2, 1) 0%, rgba($color-grey-light-2, .5) 27%, rgba($color-grey-light-2, .0) 40%, rgba($color-grey-light-2, 0) 75%, rgba($color-grey-light-2, 1) 100% ),
+    background-color: $color-grey-light-2;
+                        //linear-gradient(to bottom, rgba($color-grey-light-2, 1) 0%, rgba($color-grey-light-2, .5) 27%, rgba($color-grey-light-2, .0) 40%, rgba($color-grey-light-2, 0) 75%, rgba($color-grey-light-2, 1) 100% ),
 
-                        linear-gradient(to right, rgba($color-grey-light-2, 1) 0%, rgba($color-grey-light-2, .7) 35%,  rgba($color-grey-light-2, .3) 45%, rgba($color-grey-light-2, .3) 55%, rgba($color-grey-light-2, .7) 65%, rgba($color-grey-light-2, 1) 100%),
-
-                        url(../../vendors/img/map-1.jpg);
+                        //linear-gradient(to right, rgba($color-grey-light-2, 1) 0%, rgba($color-grey-light-2, .7) 35%,  rgba($color-grey-light-2, .3) 45%, rgba($color-grey-light-2, .3) 55%, rgba($color-grey-light-2, .7) 65%, rgba($color-grey-light-2, 1) 100%);
     background-size: cover;
     background-position: top;
     padding: 10rem 0; 
@@ -18,15 +16,41 @@
 }
 
 .where {
+    background-image: linear-gradient(to right bottom, rgba($color-light-green-2, .55), rgba($color-light-green-2, .55)), url(../../vendors/img/map-1.jpg);
+    width: 80%;
+    margin: 0 auto;
+    padding: 4rem;
+    box-shadow: 0 2rem 4rem rgba($color-black, .2);
+    backface-visibility: hidden;  
+    transition: width .4s;
+    position: relative;
+
     &__flag {
         width: 35%;
         margin: .7rem;
         box-shadow: 0 .5rem 1rem rgba($color-black, .4);
+        transition: transform .3s ease;
+        backface-visibility: hidden;
+        
+        
     }
-    
     &__PL {
         width: 78%;
+        transition: transform .3s ease;
     }
+
+    &:hover {
+        background-image: linear-gradient(to right bottom, rgba($color-light-green-2, .2), rgba($color-light-green-2, .2)), url(../../vendors/img/map-1.jpg);
+        width: 95%;
+    
+    }
+
+   // &:hover &__PL {
+    //    transform: scale(1.05);
+   // }
+   // &:hover &__flag {
+    //    transform: scale(1.05);
+   // }
 }
 
 .section-trucks {

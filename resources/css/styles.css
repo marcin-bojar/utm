@@ -78,9 +78,6 @@ body {
   text-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
   text-align: center;
   transition: all .2s; }
-  .heading-secondary:hover {
-    transform: scale(1.05) translateY(-1rem);
-    text-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.5); }
 
 .heading-tertiary {
   text-transform: uppercase;
@@ -96,6 +93,8 @@ body {
 
 .paragraph {
   line-height: 145%; }
+  .paragraph--400 {
+    font-weight: 400; }
 
 .u-margin-bottom-mid {
   margin-bottom: 6rem; }
@@ -284,20 +283,34 @@ body {
   padding: 10rem 0; }
 
 .section-where {
-  background-image: linear-gradient(to bottom, #fcfcfc 0%, rgba(252, 252, 252, 0.5) 27%, rgba(252, 252, 252, 0) 40%, rgba(252, 252, 252, 0) 75%, #fcfcfc 100%), linear-gradient(to right, #fcfcfc 0%, rgba(252, 252, 252, 0.7) 35%, rgba(252, 252, 252, 0.3) 45%, rgba(252, 252, 252, 0.3) 55%, rgba(252, 252, 252, 0.7) 65%, #fcfcfc 100%), url(../../vendors/img/map-1.jpg);
+  background-color: #fcfcfc;
   background-size: cover;
   background-position: top;
   padding: 10rem 0;
   padding-bottom: 10rem;
   text-align: center; }
 
-.where__flag {
-  width: 35%;
-  margin: .7rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4); }
-
-.where__PL {
-  width: 78%; }
+.where {
+  background-image: linear-gradient(to right bottom, rgba(216, 250, 216, 0.55), rgba(216, 250, 216, 0.55)), url(../../vendors/img/map-1.jpg);
+  width: 80%;
+  margin: 0 auto;
+  padding: 4rem;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  backface-visibility: hidden;
+  transition: width .4s;
+  position: relative; }
+  .where__flag {
+    width: 35%;
+    margin: .7rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+    transition: transform .3s ease;
+    backface-visibility: hidden; }
+  .where__PL {
+    width: 78%;
+    transition: transform .3s ease; }
+  .where:hover {
+    background-image: linear-gradient(to right bottom, rgba(216, 250, 216, 0.2), rgba(216, 250, 216, 0.2)), url(../../vendors/img/map-1.jpg);
+    width: 95%; }
 
 .section-trucks {
   padding: 10rem 0;

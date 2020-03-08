@@ -1,5 +1,5 @@
 .feature-box {
-    background-image: linear-gradient(to right bottom, rgba(#e7fce7, .7), #fff );
+    background-image: linear-gradient(to right bottom, rgba($color-light-green-1, .7), #fff );
     height: 44rem;
     padding: 1rem 1.7rem;
     border-radius: 3px;
@@ -30,7 +30,7 @@
         }
     }
     &:hover {
-        background-image: linear-gradient(to right bottom, rgba(#e7fce7, .2),rgba(#d8fad8, .6));
+        background-image: linear-gradient(to right bottom, rgba($color-light-green-1, .2),rgba($color-light-green-2, .6));
         transform: scale(1.03) translateY(-1rem) ;
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
     }
