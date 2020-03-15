@@ -16,41 +16,68 @@
 }
 
 .where {
-    background-image: linear-gradient(to right bottom, rgba($color-light-green-2, .55), rgba($color-light-green-2, .55)), url(../../vendors/img/map-1.jpg);
-    width: 80%;
+    background-image: linear-gradient(to right bottom, rgba($color-light-green-2, .6), rgba($color-light-green-2, .6)), url(../../vendors/img/map-1.jpg);
+    background-position: top;
+    width: 60%;
     margin: 0 auto;
     padding: 4rem;
     box-shadow: 0 2rem 4rem rgba($color-black, .2);
     backface-visibility: hidden;  
-    transition: width .4s;
+    transition: width .6s ease-out;
     position: relative;
 
+    &__arrow  {
+        font-size: 8rem;
+        color: $color-primary-orange;
+        width: 20%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all .2s ease-out;
+        
+    }
     &__flag {
+        opacity: 0;
         width: 35%;
         margin: .7rem;
         box-shadow: 0 .5rem 1rem rgba($color-black, .4);
-        transition: transform .3s ease;
+        transition: opacity .4s ease-out;
         backface-visibility: hidden;
         
         
     }
     &__PL {
+        opacity: 0;
         width: 78%;
-        transition: transform .3s ease;
+        transition: opacity .4s ease-out;
+    }
+
+    &__paragraph {
+        font-weight: 400;
+        opacity: 0;
+        transition: opacity .4s ease-out;
+        white-space: nowrap;
     }
 
     &:hover {
-        background-image: linear-gradient(to right bottom, rgba($color-light-green-2, .2), rgba($color-light-green-2, .2)), url(../../vendors/img/map-1.jpg);
+       // background-image: linear-gradient(to right bottom, rgba($color-light-green-2, .2), rgba($color-light-green-2, .2)), url(../../vendors/img/map-1.jpg);
         width: 95%;
-    
+        & .where__arrow {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0);
+        }
+        & .where__PL {opacity: 1;}
+        & .where__flag {opacity: 1}
+        & .where__paragraph {opacity: 1;}
     }
 
-   // &:hover &__PL {
-    //    transform: scale(1.05);
-   // }
-   // &:hover &__flag {
-    //    transform: scale(1.05);
-   // }
+   /* &:hover &__PL {
+        transform: scale(1.05);
+   }
+    &:hover &__flag {
+        transform: scale(1.05);
+    } */
 }
 
 .section-trucks {
@@ -96,7 +123,7 @@
     display: flex;
     justify-content: center;
     margin: 10rem auto;
-    width: 98%;
+    width: 99%;
 
     &:last-child {margin-bottom: 0;}
 
@@ -104,8 +131,7 @@
         width: 25%;
         transition: all .4s;
         filter: brightness(75%);
-
-        &:not(:last-child) { margin-right: .4rem; }
+      //  &:not(:last-child) { margin-right: .2rem;  }
         
 
         &:hover {
@@ -118,29 +144,32 @@
 }
 
 .section-contact {
-    margin: 4rem 2rem;
-    padding: 6rem 2rem;
+    margin: 4rem 3rem;
+    padding: 4rem 2rem;
     border-radius: 3px;
     background-color: $color-primary-orange;
 }
 
 .contact {
-    //position: relative;
-    //height: 50rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     align-items: flex-start;
-
+    
     &__heading { color: $color-white; }
 
+    &__map {
+        width: 40%;
+        border-radius: 7px;
+        overflow: hidden;
+        background-color: $color-white;
+        box-shadow: 0 1rem 3rem rgba($color-black, .3);
+    }
+
     &__details {
-        //position: absolute;
-       // top: 20%;
-        //right: 5%;
-        margin-right: 4rem;
         width: 40%;
         background-color: $color-white;
         border-radius: 7px;
+        box-shadow: 0 1rem 3rem rgba($color-black, .3);
     }
 
     &__address {
@@ -158,7 +187,6 @@
         
     }
 
-    &__mail { text-transform: lowercase; }
 
     
 }

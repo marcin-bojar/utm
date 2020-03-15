@@ -1,10 +1,13 @@
-.u-margin-bottom-mid { margin-bottom: 6rem; }
-.u-margin-bottom-big { margin-bottom: 12rem; }
-.u-margin-bottom-small { margin-bottom: 3rem; }
+.u-margin-bottom-mid { margin-bottom: 6rem !important; }
+.u-margin-bottom-big { margin-bottom: 12rem !important; }
+.u-margin-bottom-small { margin-bottom: 3rem !important; }
 
-.u-margin-top-small { margin-top: 3rem; }
-.u-margin-top-mid { margin-top: 6rem; }
-.u-margin-top-big { margin-top: 12rem; }
+.u-margin-top-small { margin-top: 3rem !important; }
+.u-margin-top-mid { margin-top: 6rem !important; }
+.u-margin-top-big { margin-top: 12rem !important; }
 
-.u-text-center { text-align: center; }
+.u-text-center { text-align: center !important; }
+.u-text-lowercase { text-transform: lowercase !important;}
+
+.u-fs-25 { font-size: 2.5rem !important; }
 

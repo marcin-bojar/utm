@@ -3,9 +3,20 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/site.webmanifest">
+        <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#ee5a24">
+        <link rel="shortcut icon" href="favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#ee5a24">
+        <meta name="msapplication-config" content="favicon/browserconfig.xml">
+        <meta name="theme-color" content="#efefef">
        
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,700&display=swap" rel="stylesheet">
-        <link href="/sass/vendors/normalize.css" rel="stylesheet">
+        <link href="sass/vendors/normalize.css" rel="stylesheet">
+        <link href="icofont/icofont.min.css" rel="stylesheet">
         <link rel="stylesheet" href="resources/css/styles.css">
             
         <title>UTM Sebastian Miszczuk</title>
@@ -47,30 +58,37 @@
                     <div class="row">
                         <div class="col-1-of-4">
                             <div class="feature-box">
+                             <!-- <i class="icofont-fast-delivery feature-box__icon feature-box__icon--1"></i> --> 
                                 <img src="vendors/icons/truck-orange.svg" alt="Truck icon" class="feature-box__icon feature-box__icon--1">
                                 <h3 class="heading-tertiary u-margin-bottom-small">Czas to pieniądz, wiemy o tym</h3>
-                                <p class="paragraph">Szanujemy Twój czas! Towar dostarczamy dokładnie wtedy, gdy go potrzebujesz dzięki starannie zaplanowanemu procesowi transportowemu.</p>
+                                <p class="feature-box__paragraph">Szanujemy Twój czas! Towar dostarczamy dokładnie wtedy, gdy go potrzebujesz dzięki starannie zaplanowanemu procesowi transportowemu.</p>
                             </div>
                         </div>
                         <div class="col-1-of-4">
                             <div class="feature-box">
+                             <!-- <i class="icofont-map feature-box__icon"></i> --> 
                                 <img src="vendors/icons/map-orange.svg" alt="Map icon" class="feature-box__icon feature-box__icon--2">
                                 <h3 class="heading-tertiary u-margin-bottom-small">W zasięgu ręki</h3>
-                                <p class="paragraph">Lokalizacja naszej firmy w pobliżu producentów cementu, wapna oraz popiołów lotnych gwarantuje optymalizację zarówno czasu, jak i kosztów transportu.</p>
+                                <p class="feature-box__paragraph">Lokalizacja naszej firmy w pobliżu producentów cementu, wapna oraz popiołów lotnych gwarantuje optymalizację zarówno czasu, jak i kosztów transportu.</p>
                             </div>
                         </div>
                         <div class="col-1-of-4">
                             <div class="feature-box">
+                             <!--<div class="feature-box__icon">
+                                <i class="icofont-satellite "></i>
+                              </div>  --> 
+                              
                                 <img src="vendors/icons/belt-orange.svg" alt="Clock icon" class="feature-box__icon feature-box__icon--3">
                                 <h3 class="heading-tertiary u-margin-bottom-small">Wszystko pod kontrolą, śpij spokojnie</h3>
-                                <p class="paragraph">Twój towar jest monitorowany przez całą dobę dzięki wyposażeniu naszego taboru w GPS oraz GSM.</p>
+                                <p class="feature-box__paragraph">Twój towar jest monitorowany przez całą dobę dzięki wyposażeniu naszego taboru w GPS oraz GSM.</p>
                             </div>
                         </div>
                         <div class="col-1-of-4">
                             <div class="feature-box">
-                                <img src="vendors/icons/team-orange.svg" alt="Truck icon" class="feature-box__icon feature-box__icon--4">
+                             <!-- <i class="icofont-people feature-box__icon"></i> --> 
+                                <img src="vendors/icons/team-orange.svg" alt="Truck icon" class="feature-box__icon feature-box__icon--4"> 
                                 <h3 class="heading-tertiary u-margin-bottom-small">Tworzymy zgrany zespół</h3>
-                                <p class="paragraph">Wierzymy, że człowiek jest najcenniejszym zasobem każdej firmy. Dlatego współpracujemy z doświadczonymi kierowcami, którzy poradzą sobie w każdej sytuacji.</p>
+                                <p class="feature-box__paragraph">Wierzymy, że człowiek jest najcenniejszym zasobem każdej firmy. Dlatego współpracujemy z doświadczonymi kierowcami, którzy poradzą sobie w każdej sytuacji.</p>
                             </div>
                       </div>  
                 
@@ -83,10 +101,11 @@
                 </div>
               </div>
               <div class="where">
+                <div class="where__arrow"><i class="icofont-maximize"></i></div>
                 <div class="row">
                   <div class="col-1-of-2">
                       <img src="vendors/img/PL.svg" alt="PL" class="where__PL u-margin-bottom-mid">
-                      <p class="paragraph--400">Naszym głównym obszarem świadczenia usług jest <strong>Polska</strong>.<br> Od lat dostarczamy ładunki do klientów z całego kraju. </p>
+                      <p class="where__paragraph">Naszym głównym obszarem świadczenia usług jest <strong>Polska</strong>.<br> Od lat dostarczamy ładunki do klientów z całego kraju. </p>
                   </div> 
                   <div class="col-1-of-2">
                    <img src="vendors/img/cz-flag-01.svg" alt="CZ flag" class="where__flag">
@@ -94,7 +113,7 @@
                    <img src="vendors/img/lt-flag-01.svg" alt="LV flag" class="where__flag">
                    <img src="vendors/img/lv-flag-01.svg" alt="LV flag" class="where__flag">
                    <img src="vendors/img/ee-flag-01.svg" alt="LV flag" class="where__flag">
-                   <p class="paragraph--400 u-margin-top-small">Z przyjemnością dowieziemy Twój towar również do krajów takich jak: <strong>Czechy, Słowacja, Litwa, Łotwa, Estonia</strong>.</p>
+                   <p class="where__paragraph u-margin-top-small">Z przyjemnością dowieziemy Twój towar również do<br> krajów takich jak: <strong>Czechy, Słowacja, Litwa, Łotwa, Estonia</strong>.</p>
                  </div> 
                 </div>
               </div>
@@ -137,11 +156,16 @@
               </div>           
             </section>
             <section class="section-contact" id="contact">
+              <div class="contact__logo">
+                <img src="resources/img/logo.svg" alt="Logo" class="logo--contact">
+              </div>
               <div class="u-margin-bottom-mid u-text-center">
                 <h2 class="heading-secondary contact__heading">Porozmawiajmy</h2>
               </div>
               <div class="contact">
-                
+                <div class="contact__map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82118.26879658701!2d18.222324013007565!3d50.54346071669787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47111ce7c7bfbd67%3A0xc8988310a3553e5d!2sMiszczuk%20S.%20Us%C5%82ugi%20transportowe!5e0!3m2!1spl!2spl!4v1584261815806!5m2!1spl!2spl" width="576" height="389.4" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
                 <div class="contact__details">
                   <div class="contact__address">
                     <p class="paragraph">Usługi Transportowe Sebastian Miszczuk<br>
@@ -149,8 +173,9 @@
                     </p>
                   </div>
                   <div class="contact__address">
-                    <p class="paragraph">tel: 602 36 36 90<br>
-                       e-mail: <span class="contact__mail">utm@interia.pl</span> 
+                    <p class="paragraph"> <span class="u-fs-25"><i class="icofont-iphone"></i>&nbsp;</span>+48 602 36 36 90<br>
+                      <span class="u-fs-25"><i class="icofont-mail"></i>&nbsp;</span>
+                       <span class="u-text-lowercase">utm@interia.pl</span> 
                     </p>
                   </div>
                   <div class="contact__address">
@@ -159,13 +184,11 @@
                     </p>
                   </div>
                   <div class="contact__address">
-                    <p class="paragraph">www.utm-transport.com.pl</p>
+                     <p class="paragraph"><span class="u-fs-25"><i class="icofont-web">&nbsp;</i></span>www.utm-transport.com.pl</p>
                   </div>
                   
                 </div>
-                <div class="contact__docs">
-
-                </div>
+                
               </div>
 
             </section>
