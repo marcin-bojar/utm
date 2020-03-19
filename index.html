@@ -24,12 +24,15 @@
     </head>
     <body>
         <header class="header">
-                <nav>
-                        <ul class="main-nav">
-                            <li><a href="#about">O nas</a></li>
-                            <li><a href="#where">Kierunki</a></li>
-                            <li><a href="#trucks">Tabor</a></li>
-                            <li><a href="#contact">Kontakt</a></li>
+                <nav class="main-nav">
+                  <div class="main-nav__logo-box">
+                    <img src="resources/img/logo-black.svg" alt="Logo" class="main-nav__logo">
+                  </div>
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item"><a class="main-nav__link" href="#about">O nas</a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="#where">Kierunki</a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="#trucks">Tabor</a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="#contact">Kontakt</a></li>
                         </ul>
                 </nav>
             
@@ -46,7 +49,7 @@
         </header>
 
         <main>
-            <section class="section-about">
+            <section class="section-about js--section-about">
                 <div class="row">
                   <div class="u-margin-bottom-mid u-text-center">
                     <h2 class="heading-secondary" id="about">Kim jesteśmy</h2>
@@ -94,7 +97,7 @@
                 
             </section>
 
-            <section class="section-where">
+            <section class="section-where js--section-where">
               <div class="row">
                 <div class="u-margin-bottom-small">
                   <h2 class="heading-secondary" id="where">Gdzie jeździmy</h2>
@@ -113,7 +116,7 @@
                    <img src="vendors/img/lt-flag-01.svg" alt="LV flag" class="where__flag">
                    <img src="vendors/img/lv-flag-01.svg" alt="LV flag" class="where__flag">
                    <img src="vendors/img/ee-flag-01.svg" alt="LV flag" class="where__flag">
-                   <p class="where__paragraph u-margin-top-small">Z przyjemnością dowieziemy Twój towar również do<br> krajów takich jak: <strong>Czechy, Słowacja, Litwa, Łotwa, Estonia</strong>.</p>
+                   <p class="where__paragraph u-margin-top-small">Z przyjemnością dowieziemy Twój towar również do krajów<br> takich jak: <strong>Czechy, Słowacja, Litwa, Łotwa, Estonia</strong>.</p>
                  </div> 
                 </div>
               </div>
@@ -164,7 +167,7 @@
               </div>
               <div class="contact">
                 <div class="contact__map">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82118.26879658701!2d18.222324013007565!3d50.54346071669787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47111ce7c7bfbd67%3A0xc8988310a3553e5d!2sMiszczuk%20S.%20Us%C5%82ugi%20transportowe!5e0!3m2!1spl!2spl!4v1584261815806!5m2!1spl!2spl" width="576" height="389.4" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82118.26879658701!2d18.222324013007565!3d50.54346071669787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47111ce7c7bfbd67%3A0xc8988310a3553e5d!2sMiszczuk%20S.%20Us%C5%82ugi%20transportowe!5e0!3m2!1spl!2spl!4v1584261815806!5m2!1spl!2spl" width="592" height="395" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
                 <div class="contact__details">
                   <div class="contact__address">
@@ -219,6 +222,9 @@
         </div>  
       </footer>
 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="vendors/js/jquery.waypoints.min.js"></script>
+      <script src="resources/js/script.js"></script>
 
     </body>
 </html>

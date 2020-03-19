@@ -1,10 +1,24 @@
 .main-nav {
-    list-style: none;  
-    text-align: right;
-    animation: .5s ease-out moveInUp 1.7s;
-    animation-fill-mode: backwards;
 
-    & li {
+    &__logo-box {
+        display: none;
+    }
+    &__logo {
+        width: 15rem;
+        padding: 2rem;
+        margin-left: 4rem;
+        vertical-align: middle;
+    }
+
+    &__list {
+        text-align: right;
+        list-style: none;  
+        animation: .5s ease-out moveInUp 1.7s;
+        animation-fill-mode: backwards;
+    }
+    
+
+    &__item {
         display: inline-block;
         font-size: 1.7rem;
         font-weight: 300;
@@ -12,16 +26,19 @@
         
     }
 
-    & li a {
+    &__link {
         text-transform: uppercase;
         text-decoration: none;
         margin-right: 1.5rem;
         padding: 1.5rem .5rem;
-        color: rgb(255, 255, 255);
+        color: $color-white;
         border: .2rem transparent;
         transition: border-bottom .2s;
     }
+
     
-    & li a:hover { border-bottom: .2rem solid $color-primary-orange; }
-    & li:active { transform: translateY(1px); }
+    &__link:hover { border-bottom: .2rem solid $color-primary-orange; }
+    &__item:active { transform: translateY(1px); }
+
+    
 }

@@ -231,9 +231,8 @@ body {
 .footer {
   background-color: #333;
   color: #f8f8f8;
-  padding: 6rem;
+  padding: 6rem 0;
   padding-bottom: 3rem;
-  margin: 3rem;
   margin-top: 0; }
   .footer__logo-box {
     width: 30%;
@@ -314,28 +313,71 @@ body {
   .header__logo {
     margin-bottom: 3rem; }
 
-.main-nav {
-  list-style: none;
+.main-nav__logo-box {
+  display: none; }
+
+.main-nav__logo {
+  width: 15rem;
+  padding: 2rem;
+  margin-left: 4rem;
+  vertical-align: middle; }
+
+.main-nav__list {
   text-align: right;
+  list-style: none;
   animation: .5s ease-out moveInUp 1.7s;
   animation-fill-mode: backwards; }
-  .main-nav li {
+
+.main-nav__item {
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: 300;
+  margin: 4rem; }
+
+.main-nav__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  padding: 1.5rem .5rem;
+  color: #fff;
+  border: .2rem transparent;
+  transition: border-bottom .2s; }
+
+.main-nav__link:hover {
+  border-bottom: 0.2rem solid #EE5A24; }
+
+.main-nav__item:active {
+  transform: translateY(1px); }
+
+.sticky-nav {
+  background-color: rgba(252, 252, 252, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2); }
+  .sticky-nav .main-nav__logo-box {
+    display: inline-block; }
+  .sticky-nav .main-nav__list {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: none; }
+  .sticky-nav .main-nav__item {
     display: inline-block;
     font-size: 1.7rem;
-    font-weight: 300;
-    margin: 4rem; }
-  .main-nav li a {
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-right: 1.5rem;
-    padding: 1.5rem .5rem;
-    color: white;
-    border: .2rem transparent;
-    transition: border-bottom .2s; }
-  .main-nav li a:hover {
-    border-bottom: 0.2rem solid #EE5A24; }
-  .main-nav li:active {
-    transform: translateY(1px); }
+    font-weight: 400;
+    margin: 2rem 4rem; }
+  .sticky-nav .main-nav__link {
+    color: #333;
+    transition: transform .2s; }
+  .sticky-nav .main-nav__link:hover {
+    border: none;
+    color: #EE5A24; }
+  .sticky-nav .main-nav__item:active {
+    transform: translateY(0); }
 
 .section-about {
   background-color: #fff;
@@ -373,22 +415,22 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: all .2s ease-out; }
+    transition: all .2s .1s ease-out; }
   .where__flag {
     opacity: 0;
     width: 35%;
     margin: .7rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
-    transition: opacity .4s ease-out;
+    transition: opacity .4s .3s ease-out;
     backface-visibility: hidden; }
   .where__PL {
     opacity: 0;
     width: 78%;
-    transition: opacity .4s ease-out; }
+    transition: opacity .4s .3s ease-out; }
   .where__paragraph {
     font-weight: 400;
     opacity: 0;
-    transition: opacity .4s ease-out;
+    transition: opacity .2s .2s ease-in;
     white-space: nowrap; }
   .where:hover {
     width: 95%; }
@@ -417,7 +459,7 @@ body {
     width: 15rem;
     padding: 3rem;
     margin-right: 5rem;
-    border-radius: 200px;
+    border-radius: 50%;
     border: 2px solid #EE5A24;
     color: #EE5A24; }
   .trucks__heading {
@@ -432,7 +474,7 @@ body {
   display: flex;
   justify-content: center;
   margin: 10rem auto;
-  width: 99%; }
+  width: 100%; }
   .photo:last-child {
     margin-bottom: 0; }
   .photo__1-4 {
@@ -445,9 +487,9 @@ body {
       z-index: 9999; }
 
 .section-contact {
-  margin: 8rem 3rem;
+  margin: 8rem 0;
   margin-bottom: 0;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 10rem 2rem;
   background-color: #EE5A24; }
 
 .contact {
