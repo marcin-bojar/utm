@@ -258,7 +258,7 @@ body {
     backface-visibility: hidden; }
   .footer__link:hover, .footer__link:active {
     color: #EE5A24;
-    transform: skew(15deg) scale(1.4);
+    transform: scale(1.3);
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4); }
   .footer__attributions {
     font-size: 1.4rem;
@@ -316,12 +316,6 @@ body {
 .main-nav__logo-box {
   display: none; }
 
-.main-nav__logo {
-  width: 15rem;
-  padding: 2rem;
-  margin-left: 4rem;
-  vertical-align: middle; }
-
 .main-nav__list {
   text-align: right;
   list-style: none;
@@ -359,17 +353,23 @@ body {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2); }
   .sticky-nav .main-nav__logo-box {
     display: inline-block; }
+  .sticky-nav .main-nav__logo {
+    width: 13rem;
+    padding: 2rem;
+    margin-left: 4rem;
+    vertical-align: middle; }
   .sticky-nav .main-nav__list {
     display: inline-block;
     position: absolute;
     top: 0;
     right: 0;
-    animation: none; }
+    animation: none;
+    vertical-align: middle; }
   .sticky-nav .main-nav__item {
     display: inline-block;
     font-size: 1.7rem;
     font-weight: 400;
-    margin: 2rem 4rem; }
+    margin: 1.85rem 4rem; }
   .sticky-nav .main-nav__link {
     color: #333;
     transition: transform .2s; }
@@ -478,13 +478,14 @@ body {
   .photo:last-child {
     margin-bottom: 0; }
   .photo__1-4 {
-    width: 25%;
+    width: 100%;
+    height: 100%;
     transition: all .4s;
     filter: brightness(75%); }
     .photo__1-4:hover {
-      transform: translateY(-1rem) scale(1.05);
-      filter: brightness(100%);
-      z-index: 9999; }
+      filter: brightness(100%); }
+  .photo__link {
+    width: 25%; }
 
 .section-contact {
   margin: 8rem 0;

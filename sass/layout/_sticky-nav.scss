@@ -10,6 +10,12 @@
     & .main-nav__logo-box {
         display: inline-block;
     }
+    & .main-nav__logo {
+        width: 13rem;
+        padding: 2rem;
+        margin-left: 4rem;
+        vertical-align: middle;
+    }
 
     & .main-nav__list { 
         display: inline-block;
@@ -17,6 +23,7 @@
         top: 0;
         right: 0;
         animation: none; 
+        vertical-align: middle;
     }
     
 
@@ -24,7 +31,7 @@
         display: inline-block;
         font-size: 1.7rem;
         font-weight: 400;
-        margin: 2rem 4rem;      
+        margin: 1.85rem 4rem;      
     }
 
     & .main-nav__link { 
