@@ -38,6 +38,14 @@
     opacity: 1;
     transform: translate(0); } }
 
+@keyframes moveOutUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0); }
+  100% {
+    opacity: 0;
+    transform: translateY(-4rem); } }
+
 *,
 *::after,
 *::before {
@@ -189,7 +197,7 @@ body {
     border: 1px solid #fff; }
 
 .feature-box {
-  background-image: linear-gradient(to right bottom, rgba(231, 252, 231, 0.7), #fff);
+  background-image: linear-gradient(to right bottom, rgba(231, 252, 231, 0.5), #fff);
   height: 44rem;
   padding: 1rem 1.7rem;
   border-radius: 3px;
@@ -197,8 +205,7 @@ body {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transition: transform .2s;
   font-size: 1.8rem;
-  font-weight: 300;
-  backface-visibility: hidden; }
+  font-weight: 300; }
   .feature-box__icon--1 {
     margin-bottom: 1.5rem;
     width: 52%; }
@@ -222,7 +229,7 @@ body {
       margin-bottom: 1.5rem;
       background-color: #EE5A24; }
   .feature-box:hover {
-    background-image: linear-gradient(to right bottom, rgba(231, 252, 231, 0.2), rgba(216, 250, 216, 0.6));
+    background-image: linear-gradient(to right bottom, rgba(231, 252, 231, 0.2), rgba(216, 250, 216, 0.3));
     transform: scale(1.03) translateY(-1rem);
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2); }
 
@@ -397,7 +404,7 @@ body {
   text-align: center; }
 
 .where {
-  background-image: linear-gradient(to right bottom, rgba(216, 250, 216, 0.6), rgba(216, 250, 216, 0.6)), url(../../vendors/img/map-1.jpg);
+  background-image: linear-gradient(to right bottom, rgba(216, 250, 216, 0.4), rgba(216, 250, 216, 0.4)), url(../../vendors/img/map-1.jpg);
   background-position: top;
   width: 60%;
   margin: 0 auto;
@@ -503,18 +510,25 @@ body {
 
 .contact {
   display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start; }
+  justify-content: space-evenly; }
   .contact__heading {
     color: #fff; }
-  .contact__map {
+  .contact__map-box {
+    position: relative;
     width: 40%;
     border-radius: 7px;
     overflow: hidden;
-    background-color: #fff;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3); }
+  .contact__map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; }
   .contact__details {
     width: 40%;
+    height: 100%;
     background-color: #fff;
     border-radius: 7px;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3); }
