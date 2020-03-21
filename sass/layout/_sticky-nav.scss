@@ -6,8 +6,7 @@
     width: 100%;
     z-index: 9999;
     box-shadow: 0 1rem 3rem rgba($color-black, .2);
-
-   // animation: moveInUp .4s ease-out;
+   // backface-visibility: hidden;
 
     & .main-nav__logo-box {
         display: inline-block;
@@ -20,33 +19,40 @@
     }
 
     & .main-nav__list { 
-        display: inline-block;
         position: absolute;
         top: 0;
         right: 0;
         animation: none; 
         vertical-align: middle;
+      //  animation: none;
     }
     
 
     & .main-nav__item {
-        display: inline-block;
-        font-size: 1.7rem;
         font-weight: 400;
-        margin: 1.85rem 4rem;      
+        margin: 1.85rem 4rem;   
+           
     }
 
     & .main-nav__link { 
-        color: $color-grey-dark;
-        transition: transform .2s;
-    }
 
-    & .main-nav__link:hover { 
-        border: none;
-        color: $color-primary-orange; 
+        &:link,
+        &:visited {
+            color: $color-grey-dark;
+            padding: 0;
+            transition: color .2s;
+            
+        }
+        &:hover {
+            border: none;
+            color: $color-primary-orange; 
+        }
+        &:active { transform: translateY(0); }
         
     }
-    & .main-nav__item:active { transform: translateY(0); }
+
+    
+    
 }
 
 

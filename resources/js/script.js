@@ -12,18 +12,19 @@ $(document).ready(function() {
                 
             } else {    
                 $('.sticky-nav').addClass('main-nav');
-                $('.sticky-nav').css("animation", "none").css("animation", "moveOutUp .5s ease-out");
+                $('.sticky-nav').css("animation", "moveOutUp .5s ease-in");
                 setTimeout(function() {
                     $('.main-nav').removeClass('sticky-nav');
-                }, 500 );
+                }, 450 );
             }
         } else {
-             $('.sticky-nav').css("animation", "moveOutUp .5s ease-out");
+             $('.sticky-nav').css("animation", "moveOutUp .5s ease-in");
              $('.sticky-nav').addClass('main-nav');
-             $('.main-nav__list').css('animation', 'none');
-             setTimeout(function() {
+             $('.main-nav__list').css("animation", "none");
+            setTimeout(function() {
                 $('.main-nav').removeClass('sticky-nav');
-            }, 500 );
+               
+            }, 450 );
         }  
              
 

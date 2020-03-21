@@ -21,18 +21,23 @@
     }
 
     &__link {
-        text-transform: uppercase;
-        text-decoration: none;
-        margin-right: 1.5rem;
-        padding: 1.5rem .5rem;
-        color: $color-white;
-        border: .2rem transparent;
-        transition: border-bottom .2s;
+        
+        &:link,
+        &:visited {
+            display: inline-block;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            padding: 1.5rem .5rem;
+            color: $color-white;
+            border: .2rem transparent;
+            transition: all .2s;
+        }
+
+        &:hover { border-bottom: .2rem solid $color-primary-orange; }
+
+        &:active { transform: translateY(1px); }
+        
     }
-
-    
-    &__link:hover { border-bottom: .2rem solid $color-primary-orange; }
-    &__item:active { transform: translateY(1px); }
-
     
 }
