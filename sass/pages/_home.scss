@@ -72,12 +72,10 @@
         & .where__paragraph {opacity: 1;}
     }
 
-   /* &:hover &__PL {
-        transform: scale(1.05);
-   }
-    &:hover &__flag {
-        transform: scale(1.05);
-    } */
+  /* &__col { 
+       width: 48%;
+       float: left;    // fixes IE animation bug
+     }  */
 }
 
 .section-trucks {
@@ -153,7 +151,7 @@
 
 .contact {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
    
     &__heading { color: $color-white; }
 
