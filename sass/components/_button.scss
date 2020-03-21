@@ -11,6 +11,7 @@
         font-weight: 300;
         transition: all .2s;
         position: relative;
+        backface-visibility: hidden;
     }
     
     &:hover { transform: translateY(-3px); }
@@ -21,6 +22,7 @@
     }
 
     &--full {
+        backface-visibility: hidden;
         background-color: $color-primary-orange;
         color: $color-white;
     }
@@ -60,6 +62,7 @@
     &--full.btn--animated {
         animation: .5s ease-out moveInLeft 1.7s;
         animation-fill-mode: backwards;
+        backface-visibility: hidden;
 
         &::after { background-color: $color-primary-orange; }
     }
@@ -67,6 +70,7 @@
     &--ghost.btn--animated {
         animation: .5s ease-out moveInRight 1.7s;
         animation-fill-mode: backwards;
+        backface-visibility: hidden;
 
         &::after { border: 1px solid $color-white; }
     }
