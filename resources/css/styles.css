@@ -329,6 +329,27 @@ body {
   .header__logo {
     margin-bottom: 3rem; }
 
+.IE header {
+  background-attachment: scroll; }
+
+.IE .where {
+  width: 95%;
+  transition: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .IE .where .where__flag {
+    opacity: 1; }
+  .IE .where .where__PL {
+    opacity: 1; }
+  .IE .where .where__arrow {
+    display: none; }
+  .IE .where .where__paragraph {
+    opacity: 1; }
+
+.IE .where__col {
+  width: 48%; }
+
 .main-nav__logo-box {
   display: none; }
 

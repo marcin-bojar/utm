@@ -31,10 +31,20 @@ $(document).ready(function() {
         previousScroll = currentScroll;
     });
 
+
     $('.photo').magnificPopup({
         delegate: 'a', // child items selector, by clicking on it popup will open
         type: 'image',
         gallery: {enabled:true}
       });
+
+
+      //this is not futureproof! all future versions of Edge will be excluded too...
+      if ((navigator.userAgent.match("Edg") && navigator.appVersion.match(/^[/80]+/g)) || navigator.userAgent.match ("Trident") || navigator.userAgent.match("MSIE")) {
+        $('html').addClass('IE');
+        $('.col-1-of-2').addClass('where__col'); 
+    }
+
+    
 
 });

@@ -1,0 +1,24 @@
+.IE {
+
+    & header { background-attachment: scroll;}
+
+    & .where {
+        width: 95%;
+        transition: none;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        .where__flag { opacity: 1; }
+
+        .where__PL { opacity: 1; }
+
+        .where__arrow { display: none; }
+
+        .where__paragraph { opacity: 1; }
+    }
+
+    & .where__col { width: 48%; }  
+
+}
+
