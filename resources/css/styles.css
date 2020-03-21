@@ -415,11 +415,7 @@ body {
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
   backface-visibility: hidden;
   transition: width .6s ease-out;
-  position: relative;
-  /* &__col { 
-       width: 48%;
-       float: left;    // fixes IE animation bug
-     }  */ }
+  position: relative; }
   .where__arrow {
     font-size: 8rem;
     color: #EE5A24;
@@ -456,6 +452,8 @@ body {
       opacity: 1; }
     .where:hover .where__paragraph {
       opacity: 1; }
+  .where .IE {
+    width: 95%; }
 
 .section-trucks {
   padding: 10rem 0;

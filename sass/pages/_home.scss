@@ -72,10 +72,9 @@
         & .where__paragraph {opacity: 1;}
     }
 
-  /* &__col { 
-       width: 48%;
-       float: left;    // fixes IE animation bug
-     }  */
+  & .IE {
+      width: 95%;
+  }
 }
 
 .section-trucks {
