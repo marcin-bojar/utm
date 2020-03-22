@@ -40,7 +40,7 @@ $(document).ready(function() {
 
 
       //this is not futureproof! all future versions of Edge will be excluded too...
-      if ((navigator.userAgent.match("Edg") && (parseInt(navigator.appVersion, 10) < 80)) || navigator.userAgent.match ("Trident") || navigator.userAgent.match("MSIE")) {
+      if (navigator.userAgent.match("Edg") || navigator.userAgent.match ("Trident") || navigator.userAgent.match("MSIE")) {
         $('html').addClass('IE');
         $('.col-1-of-2').addClass('where__col'); 
     }
