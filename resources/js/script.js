@@ -39,8 +39,12 @@ $(document).ready(function() {
       });
 
 
-      //this is not futureproof! all future versions of Edge will be excluded too...
-      if (navigator.userAgent.match("Edg") || navigator.userAgent.match ("Trident") || navigator.userAgent.match("MSIE")) {
+      var ua = navigator.userAgent;
+      var pos = ua.indexOf("Edg/");
+      var version = ua.substr(pos+4);
+      var major = parseInt(version); 
+
+      if (navigator.userAgent.match("Edge") || (navigator.userAgent.match("Edg") && major < 80) || navigator.userAgent.match ("Trident") || navigator.userAgent.match("MSIE")) {
         $('html').addClass('IE');
         $('.col-1-of-2').addClass('where__col'); 
     }
