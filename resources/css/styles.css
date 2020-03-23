@@ -312,7 +312,7 @@ body {
     width: calc(3 * ((100% - 3 * 4rem) / 4) + 2 * 4rem); }
 
 .header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../vendors/img/scania-header.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../vendors/img/scania-header-min.jpg);
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
