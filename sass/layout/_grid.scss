@@ -4,6 +4,12 @@
     
     @include clearfix;
 
+    @include respond(large) {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 3rem;
+    } 
+
     &:not(:last-child) { 
         margin-bottom: $gutter-vertical; 
     }
@@ -14,7 +20,13 @@
         &:not(:last-child) { 
             margin-right: $gutter-horizontal;
         }
-    }
+
+        @include respond(medium) {
+           width: 100% !important;
+           margin-right: 0;
+           margin-bottom: $gutter-vertical;
+        }  
+    } 
    
     .col-1-of-2 {
         width: calc((100% - #{$gutter-horizontal}) / 2);

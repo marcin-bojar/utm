@@ -6,3 +6,29 @@
     }
     
 }
+
+@mixin respond ($bp) {
+    // 1200px
+    @if $bp == largest {
+        @media only screen and (max-width: 75em) { @content } 
+    }
+
+    //1100px - h1 styling
+    @if $bp == large-h1 {
+        @media only screen and (max-width: 68.75em) { @content }
+    }
+
+    //1000px
+    @if $bp == large {
+        @media only screen and (max-width: 62.5em) { @content }
+    }
+
+    //900px
+    @if $bp == medium {
+        @media only screen and (max-width: 56.25em) { @content }
+    }
+
+
+
+
+}

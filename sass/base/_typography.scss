@@ -15,6 +15,16 @@ body {
     animation: .5s ease-out moveInBottom 1.5s;
     animation-fill-mode: backwards;
 
+    @include respond(large-h1) {
+        //letter-spacing: .2rem;
+        font-size: 3.5rem;
+    }
+
+    @include respond(large) {
+        letter-spacing: .3rem;
+        font-size: 3.5rem;
+    }
+
 }
 
 .heading-secondary {
@@ -48,6 +58,11 @@ body {
     padding: 2rem 8rem;
     border-left: 1px solid $color-primary-orange;
     border-right: 1px solid $color-primary-orange;
+    
+    @include respond(large) {
+        border-left: none;
+        border-right: none;
+    }
 }
 
 .paragraph {

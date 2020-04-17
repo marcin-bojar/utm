@@ -56,6 +56,9 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box;
@@ -75,6 +78,13 @@ body {
   backface-visibility: hidden;
   animation: .5s ease-out moveInBottom 1.5s;
   animation-fill-mode: backwards; }
+  @media only screen and (max-width: 68.75em) {
+    .heading-primary {
+      font-size: 3.5rem; } }
+  @media only screen and (max-width: 62.5em) {
+    .heading-primary {
+      letter-spacing: .3rem;
+      font-size: 3.5rem; } }
 
 .heading-secondary {
   display: inline-block;
@@ -99,6 +109,10 @@ body {
   padding: 2rem 8rem;
   border-left: 1px solid #EE5A24;
   border-right: 1px solid #EE5A24; }
+  @media only screen and (max-width: 62.5em) {
+    .section-about__paragraph {
+      border-left: none;
+      border-right: none; } }
 
 .paragraph {
   line-height: 145%; }
@@ -107,6 +121,9 @@ body {
 
 .u-margin-bottom-mid {
   margin-bottom: 6rem !important; }
+  @media only screen and (max-width: 75em) {
+    .u-margin-bottom-mid {
+      margin-bottom: 4rem !important; } }
 
 .u-margin-bottom-big {
   margin-bottom: 12rem !important; }
@@ -210,18 +227,33 @@ body {
   transition: transform .2s;
   font-size: 1.8rem;
   font-weight: 300; }
+  @media only screen and (max-width: 56.25em) {
+    .feature-box {
+      height: 27rem; } }
   .feature-box__icon--1 {
     margin-bottom: 1.5rem;
     width: 52%; }
+    @media only screen and (max-width: 56.25em) {
+      .feature-box__icon--1 {
+        width: 10%; } }
   .feature-box__icon--2 {
     margin-bottom: 1rem;
     width: 47%; }
+    @media only screen and (max-width: 56.25em) {
+      .feature-box__icon--2 {
+        width: 10%; } }
   .feature-box__icon--3 {
     margin-bottom: -.5rem;
     width: 52%; }
+    @media only screen and (max-width: 56.25em) {
+      .feature-box__icon--3 {
+        width: 10%; } }
   .feature-box__icon--4 {
     margin-bottom: 1rem;
     width: 44%; }
+    @media only screen and (max-width: 56.25em) {
+      .feature-box__icon--4 {
+        width: 10%; } }
   .feature-box__paragraph {
     line-height: 145%; }
     .feature-box__paragraph::before {
@@ -292,12 +324,22 @@ body {
     content: "";
     display: table;
     clear: both; }
+  @media only screen and (max-width: 62.5em) {
+    .row {
+      max-width: 100%;
+      width: 100%;
+      padding: 0 3rem; } }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
   .row [class^="col-"] {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important;
+        margin-right: 0;
+        margin-bottom: 8rem; } }
   .row .col-1-of-2 {
     width: calc((100% - 4rem) / 2); }
   .row .col-1-of-3 {
@@ -418,6 +460,9 @@ body {
 .section-about {
   background-color: #fff;
   padding: 10rem 0; }
+  @media only screen and (max-width: 75em) {
+    .section-about {
+      padding: 7rem 0; } }
 
 .section-where {
   background-color: #fcfcfc;
@@ -426,10 +471,14 @@ body {
   padding: 10rem 0;
   padding-bottom: 10rem;
   text-align: center; }
+  @media only screen and (max-width: 75em) {
+    .section-where {
+      padding: 7rem 0; } }
 
 .where {
   background-image: linear-gradient(to right bottom, rgba(216, 250, 216, 0.4), rgba(216, 250, 216, 0.4)), url(../../vendors/img/map-1.jpg);
-  background-position: top;
+  background-position: center;
+  background-size: cover;
   width: 60%;
   margin: 0 auto;
   padding: 4rem;
@@ -437,6 +486,18 @@ body {
   backface-visibility: hidden;
   transition: width .6s ease-out;
   position: relative; }
+  @media only screen and (max-width: 75em) {
+    .where {
+      width: 95%; }
+      .where .where__arrow {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0); }
+      .where .where__PL {
+        opacity: 1; }
+      .where .where__flag {
+        opacity: 1; }
+      .where .where__paragraph {
+        opacity: 1; } }
   .where__arrow {
     font-size: 8rem;
     color: #EE5A24;
@@ -454,6 +515,7 @@ body {
     transition: opacity .4s .3s ease-out;
     backface-visibility: hidden; }
   .where__PL {
+    margin-bottom: 6rem;
     opacity: 0;
     width: 78%;
     transition: opacity .4s .3s ease-out; }
@@ -479,6 +541,9 @@ body {
 .section-trucks {
   padding: 10rem 0;
   background-color: #fff; }
+  @media only screen and (max-width: 75em) {
+    .section-trucks {
+      padding: 7rem 0; } }
 
 .trucks {
   display: flex;
@@ -531,6 +596,9 @@ body {
 .contact {
   display: flex;
   justify-content: space-around; }
+  @supports (justify-content: space-evenly) {
+    .contact {
+      justify-content: space-evenly; } }
   .contact__heading {
     color: #fff; }
   .contact__map-box {

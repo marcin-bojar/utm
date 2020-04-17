@@ -1,6 +1,10 @@
 .section-about {
     background-color: $color-white;
     padding: 10rem 0;
+
+    @include respond(largest) {
+        padding: 7rem 0;
+    }
 }
 
 .section-where {
@@ -13,11 +17,16 @@
     padding: 10rem 0; 
     padding-bottom: 10rem;
     text-align: center;
+
+    @include respond(largest) {
+        padding: 7rem 0;
+    }
 }
 
 .where {
     background-image: linear-gradient(to right bottom, rgba($color-light-green-2, .4), rgba($color-light-green-2, .4)), url(../../vendors/img/map-1.jpg);
-    background-position: top;
+    background-position: center;
+    background-size: cover;
     width: 60%;
     margin: 0 auto;
     padding: 4rem;
@@ -25,6 +34,17 @@
     backface-visibility: hidden;  
     transition: width .6s ease-out;
     position: relative;
+
+    @include respond(largest) {
+        width: 95%;
+        & .where__arrow {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0);
+        }
+        & .where__PL {opacity: 1;}
+        & .where__flag {opacity: 1}
+        & .where__paragraph {opacity: 1;}
+    }
 
     &__arrow  {
         font-size: 8rem;
@@ -48,6 +68,7 @@
         
     }
     &__PL {
+        margin-bottom: 6rem;
         opacity: 0;
         width: 78%;
         transition: opacity .4s .3s ease-out;
@@ -80,6 +101,10 @@
 .section-trucks {
     padding: 10rem 0;
     background-color: $color-white;
+
+    @include respond(largest) {
+        padding: 7rem 0;
+    }
 }
 
 
@@ -151,6 +176,10 @@
 .contact {
     display: flex;
     justify-content: space-around;
+
+    @supports(justify-content: space-evenly) {
+        justify-content: space-evenly;
+    }
    
     &__heading { color: $color-white; }
 

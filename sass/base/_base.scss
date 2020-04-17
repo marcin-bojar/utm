@@ -9,6 +9,10 @@
 html { 
     font-size: 62.5%;
     scroll-behavior: smooth;
+
+    @include respond(largest) {
+        font-size: 50%;
+    }
 }
 
 body { 

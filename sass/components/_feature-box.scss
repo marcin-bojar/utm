@@ -9,25 +9,41 @@
     font-size: 1.8rem;
     font-weight: 300;
     //backface-visibility: hidden;
+
+    @include respond(medium) {
+        height: 27rem;
+
+     } 
     
     &__icon {
 
         &--1 {
             margin-bottom: 1.5rem;
             width: 52%;
-            
+            @include respond(medium) {
+                width: 10%;
+             }
         }
         &--2 {
             margin-bottom: 1rem;
             width:47%;
+            @include respond(medium) {
+                width: 10%;
+             }
         }
         &--3 {
             margin-bottom: -.5rem;
             width:52%;
+            @include respond(medium) {
+                width: 10%;
+             }
         }
         &--4 {
             margin-bottom: 1rem;
             width:44%;
+            @include respond(medium) {
+                width: 10%;
+             }
         }
     }
 
