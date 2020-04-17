@@ -26,6 +26,15 @@ $(document).ready(function() {
                
             }, 450 );
         }  
+
+     /*   $(window).resize(function() {
+            if($(window).width() <= 583) {
+                $('.js--main-nav').css('display', 'none');
+            } else {
+                $('.js--main-nav').css('display', 'block');
+            }
+        })
+    */
              
 
         previousScroll = currentScroll;

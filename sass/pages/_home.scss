@@ -3,7 +3,11 @@
     padding: 10rem 0;
 
     @include respond(largest) {
-        padding: 7rem 0;
+        padding: 8rem 0;
+    }
+
+    @include respond (medium) {
+        padding: 4rem 0;
     }
 }
 
@@ -46,6 +50,10 @@
         & .where__paragraph {opacity: 1;}
     }
 
+    @include respond(large) {
+        padding: 4rem 0;
+     }
+
     &__arrow  {
         font-size: 8rem;
         color: $color-primary-orange;
@@ -64,21 +72,36 @@
         box-shadow: 0 .5rem 1rem rgba($color-black, .4);
         transition: opacity .4s .3s ease-out;
         backface-visibility: hidden;
+
+        @include respond(medium) {
+            width: 17%;
+        }
         
         
     }
     &__PL {
-        margin-bottom: 6rem;
+        margin-bottom: 3.2rem;
         opacity: 0;
         width: 78%;
         transition: opacity .4s .3s ease-out;
+
+        @include respond(medium) {
+            width: 55%;
+        }
     }
 
     &__paragraph {
         font-weight: 400;
         opacity: 0;
+        margin-top: 3rem;
         transition: opacity .2s .2s ease-in;
         white-space: nowrap;
+
+        @include respond(medium) {
+            white-space: normal;
+            font-size: 2.4rem;
+            margin-top: 5rem;
+        }
     }
 
     &:hover {
@@ -124,13 +147,31 @@
         border-radius: 50%;
         border: 2px solid $color-primary-orange;
         color: $color-primary-orange;
+
+        @include respond(medium) {
+            margin-bottom: 2.5rem;
+        }
     }
     &__heading {
         display: block;
         font-size: 3rem;
         text-transform: uppercase;
         margin-right: 5rem;
+        
    }
+
+   &__paragraph {
+        
+    @include respond(medium) {
+             margin-top: 2.5rem;
+        }
+   }
+
+
+    @include respond(medium) {
+        flex-wrap: wrap;
+    }
+
 
     &:not(:last-child) { margin-bottom: 10rem; }
 
@@ -143,11 +184,19 @@
     margin: 10rem auto;
     width: 100%;
 
+    @include respond(medium) {
+        flex-wrap: wrap;
+    }
+
     &:last-child {margin-bottom: 0;}
 
     &__link {
         width: 25%;
         overflow: hidden;
+
+        @include respond(medium) {
+           width: 50%;
+        }
     }
 
     &__1-4 {
@@ -156,6 +205,10 @@
         transition: all .4s;
         filter: brightness(75%);
         transform: scale(1.1);
+
+        @include respond(medium) {
+           
+         }
       
         &:hover {
             transform: scale(1.03);
@@ -180,22 +233,30 @@
     @supports(justify-content: space-evenly) {
         justify-content: space-evenly;
     }
+
+    @include respond(medium) {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
    
     &__heading { color: $color-white; }
 
 
     &__map-box {
-        position: relative;
+        
         width: 40%;
         border-radius: 7px;
         overflow: hidden;
         box-shadow: 0 1rem 3rem rgba($color-black, .3);
+
+        @include respond(medium) {
+           width: 80%;
+           height: 40rem;
+        }
     }
 
     &__map {
-        position: absolute; 
-        top: 0;
-        left: 0;
+      
         width: 100%;
         height: 100%;
         border: none;
@@ -203,10 +264,15 @@
 
     &__details {
         width: 40%;
-        height: 100%; 
+        height: 100%;
         background-color: $color-white;
         border-radius: 7px;
         box-shadow: 0 1rem 3rem rgba($color-black, .3);
+
+        @include respond(medium) {
+            width: 80%;
+            margin-bottom: 8rem;
+         }
     }
 
     &__address {

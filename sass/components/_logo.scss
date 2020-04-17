@@ -4,5 +4,9 @@
         width: 65%;
         animation: 1s ease-out moveInInside 1s;
         animation-fill-mode: backwards;
+
+        @include respond(medium) {
+            width: 75%;
+        }
     }
 }

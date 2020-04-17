@@ -56,17 +56,28 @@ body {
     width: 100%;
     text-align: justify;
     padding: 2rem 8rem;
+    margin-bottom: 6rem;
     border-left: 1px solid $color-primary-orange;
     border-right: 1px solid $color-primary-orange;
     
     @include respond(large) {
         border-left: none;
         border-right: none;
+        margin-bottom: 3.5rem;
     }
+
+    @include respond(medium) {
+        padding: 0;
+    }
+    
 }
 
 .paragraph {
     line-height: 145%;
+
+    @include respond(medium800) {
+        flex-wrap: wrap;
+    }
 
     &--400 {
         font-weight: 400;
