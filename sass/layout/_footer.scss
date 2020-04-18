@@ -7,14 +7,36 @@
     margin-top: 0;
 
     &__logo-box {
-        width: 30%;
+        width: auto;
         margin: 0 auto;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
         text-align: center;
         
     }
 
-    &__logo { width: 80%; }
+    &__logo { 
+        width: 23vw;
+    
+        @include respond(largest) {
+            width: 30vw;
+        }
+
+        @include respond(large-h1) {
+            width: 32vw;
+        }
+
+        @include respond(small) {
+            width: 36vw;
+        }
+
+        @include respond(small) {
+            width: 42vw;
+        }
+
+        @include respond(big-phone) {
+            width: 48vw;
+        }
+    }
 
     &__list { list-style: none; }
 
@@ -22,7 +44,17 @@
         display: inline-block;
         text-transform: uppercase;
         font-size: 1.6rem;
-        &:not(:last-child) { margin-right: 4rem; }
+        &:not(:last-child) { 
+            margin-right: 4rem;
+            
+            @include respond(big-phone) {
+                margin-right: 1.5rem;
+            }
+
+            @include respond(phone) {
+                margin-right: 0;
+            }
+        }
     }
 
     &__link {
@@ -50,6 +82,17 @@
         display: inline-block;
         border-top: 1px solid $color-grey-dark-2;
         padding-top: 2rem;
+
+        @include respond(smaller) {
+            display: block;
+            margin: 0 auto;
+            width: 90%;
+            text-align: center;
+        }
+
+        @include respond(phone) {
+            width: 95%;   
+        }
     }
 
     &__copyright {
@@ -57,5 +100,9 @@
         width: 70%;
         margin: 0 auto;
         text-align: center;
+
+        @include respond(largest) {
+            width: 95%;
+        }
     }
 }

@@ -8,5 +8,13 @@
         @include respond(medium) {
             width: 75%;
         }
+
+        @include respond(small) {
+            width: 80%;
+        }
+
+        @include respond(big-phone) {
+            width: 85%;
+        }
     }
 }

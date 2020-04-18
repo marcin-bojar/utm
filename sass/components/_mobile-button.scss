@@ -1,0 +1,56 @@
+.mobile-button {
+    position: fixed;
+    top: 3.5rem;
+    right: 2rem;
+    z-index: 5000;
+
+    &__icon {
+        display: none;
+        height: 6rem;
+        width: 6rem;
+        fill: $color-primary-orange;
+        cursor: pointer;
+    }
+}
+
+.mobile-nav {
+    background-color: rgba(rgb(14, 14, 14), .93);
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    position: fixed;
+    z-index: 4999;
+
+    &__logo {
+        position: absolute;
+        top: 4.5rem;
+        left: 3.5rem;
+        width: 35%;
+        max-width: 20rem;
+    }
+    
+    &__list {
+        list-style: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__item {
+        font-size: 3.5rem;
+        font-weight: 400;
+        
+    }
+
+    &__link:link,
+    &__link:visited {
+        display: inline-block;
+        margin-bottom: 4.5rem;
+        color: $color-primary-orange;
+        text-decoration: none;
+        text-transform: uppercase;
+        
+        
+    }
+}

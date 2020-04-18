@@ -20,29 +20,65 @@
         &--1 {
             margin-bottom: 1.5rem;
             width: 52%;
+           
             @include respond(medium) {
                 width: 11%;
+             }
+
+             @include respond(big-phone) {
+                width: 17%;
+             }
+
+             @include respond(phone) {
+                width: 20%;
              }
         }
         &--2 {
             margin-bottom: 1rem;
             width:47%;
+           
             @include respond(medium) {
                 width: 10%;
+             }
+
+             @include respond(big-phone) {
+                width: 16%;
+             }
+
+             @include respond(phone) {
+                width: 19%;
              }
         }
         &--3 {
             margin-bottom: -.5rem;
             width:52%;
+            
             @include respond(medium) {
                 width: 13%;
+             }
+
+             @include respond(big-phone) {
+                width: 19%;
+             }
+
+             @include respond(phone) {
+                width: 22%;
              }
         }
         &--4 {
             margin-bottom: 1rem;
             width:44%;
+           
             @include respond(medium) {
                 width: 10%;
+             }
+
+             @include respond(big-phone) {
+                width: 16%;
+             }
+
+             @include respond(phone) {
+                width: 19%;
              }
         }
     }

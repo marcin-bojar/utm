@@ -12,6 +12,11 @@
         transition: all .2s;
         position: relative;
         backface-visibility: hidden;
+
+        @include respond(smaller) {
+            display: block;
+            margin: 0 auto 2.5rem auto;
+        }
     }
     
     &:hover { transform: translateY(-3px); }
@@ -25,11 +30,27 @@
         backface-visibility: hidden;
         background-color: $color-primary-orange;
         color: $color-white;
+
+        @include respond(smaller) {
+            width: 45%;   
+        }
     }
 
     &--ghost { 
         backface-visibility: hidden;
         color: $color-white;
+
+        @include respond(smaller) {
+            width: 63%;   
+        }
+
+        @include respond(big-phone) {
+            width: 80%;
+        }
+
+        @include respond(phone) {
+            width: 70%;
+        }
        
         &:hover {
             color: $color-grey-dark;

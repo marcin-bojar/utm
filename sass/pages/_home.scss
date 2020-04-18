@@ -7,7 +7,7 @@
     }
 
     @include respond (medium) {
-        padding: 4rem 0;
+        padding: 5rem 0;
     }
 }
 
@@ -24,6 +24,10 @@
 
     @include respond(largest) {
         padding: 7rem 0;
+    }
+
+    @include respond(small) {
+        padding: 5rem 0;
     }
 }
 
@@ -54,6 +58,10 @@
         padding: 4rem 0;
      }
 
+     @include respond(smaller) {
+        padding: 2rem 0;
+     }
+
     &__arrow  {
         font-size: 8rem;
         color: $color-primary-orange;
@@ -76,6 +84,10 @@
         @include respond(medium) {
             width: 17%;
         }
+
+        @include respond(big-phone) {
+            width: 25%;
+        }
         
         
     }
@@ -87,6 +99,14 @@
 
         @include respond(medium) {
             width: 55%;
+        }
+
+        @include respond(big-phone) {
+            width: 65%;
+        }
+
+        @include respond(big-phone) {
+            width: 75%;
         }
     }
 
@@ -101,6 +121,14 @@
             white-space: normal;
             font-size: 2.4rem;
             margin-top: 5rem;
+        }
+
+        @include respond(small) {
+            font-size: 2.2rem;
+        }
+
+        @include respond(smaller) {
+            font-size: 2rem;
         }
     }
 
@@ -129,7 +157,6 @@
         padding: 7rem 0;
     }
 }
-
 
 
 .trucks {
@@ -238,6 +265,13 @@
         flex-direction: column-reverse;
         align-items: center;
     }
+
+    &__logo {
+
+        @include respond(small) {
+           display: none;
+        }
+    }
    
     &__heading { color: $color-white; }
 
@@ -252,6 +286,10 @@
         @include respond(medium) {
            width: 80%;
            height: 40rem;
+        }
+
+        @include respond(smaller) {
+            width: 95%;
         }
     }
 
@@ -272,7 +310,11 @@
         @include respond(medium) {
             width: 80%;
             margin-bottom: 8rem;
-         }
+        }
+
+        @include respond(smaller) {
+            width: 95%;
+        }
     }
 
     &__address {

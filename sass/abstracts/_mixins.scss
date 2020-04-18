@@ -28,9 +28,24 @@
         @media only screen and (max-width: 56.25em) { @content }
     }
 
-    //700px - 
+    //700px  
     @if $bp == small {
         @media only screen and (max-width: 43.75em) { @content }
+    }
+
+    //600px
+    @if $bp == smaller {
+        @media only screen and (max-width: 37.5em) { @content }
+    }
+
+    //500px
+    @if $bp == big-phone {
+        @media only screen and (max-width: 31.25em) { @content }
+    }
+
+    //400px
+    @if $bp == phone {
+        @media only screen and (max-width: 25em) { @content }
     }
 
 
