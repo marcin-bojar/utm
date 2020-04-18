@@ -10,10 +10,20 @@
     font-weight: 300;
     //backface-visibility: hidden;
 
-    @include respond(medium) {
-        height: 27rem;
+    @include respond(large) { 
+      height: 47rem;
+      
+   } 
 
-     } 
+    @include respond(medium) { 
+      height: 27rem;
+      font-size: 2rem;
+      } 
+
+    @include respond(big-phone) { 
+      height: 34rem; 
+     
+   }
     
     &__icon {
 

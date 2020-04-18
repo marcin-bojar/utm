@@ -11,11 +11,11 @@ html {
     scroll-behavior: smooth;
 
     @include respond(largest) {
-        font-size: 50%;
+        font-size: 56.25%;
     }
 
-    @include respond(phone) {
-        font-size: 43.75%;
+    @include respond(medium) {
+        font-size: 50%;
     }
 }
 

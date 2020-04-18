@@ -9,12 +9,6 @@
         list-style: none;  
         animation: .5s ease-out moveInUp 1.7s;
         animation-fill-mode: backwards;
-
-        @include respond(small) {
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-        }
     }
     
 
@@ -22,11 +16,10 @@
         display: inline-block;
         font-size: 1.7rem;
         font-weight: 300;
-        margin: 4rem;
+        margin: 4rem 3rem;
 
-        @include respond(small) {
-            margin: 0;
-            font-size: 2rem;
+        @include respond(large) {
+            margin: 4rem 2rem;
         }
         
     }
@@ -43,20 +36,9 @@
             color: $color-white;
             border: .2rem transparent;
             transition: all .2s;
-
-            @include respond(small) {
-                margin-right: 0;
-                margin-left: 2rem;
-            }
         }
 
-        &:hover { 
-            border-bottom: .2rem solid $color-primary-orange;
-            
-            @include respond(small) {
-                border-bottom: none;
-            }
-        }
+        &:hover { border-bottom: .2rem solid $color-primary-orange; }
 
         &:active { transform: translateY(1px); }
         

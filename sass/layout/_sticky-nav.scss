@@ -32,6 +32,9 @@
         font-weight: 400;
         margin: 1.85rem 4rem;   
            
+        @include respond (medium) {
+            margin: 1.85rem 2rem;
+        }
     }
 
     & .main-nav__link { 
