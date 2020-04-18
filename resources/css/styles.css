@@ -437,7 +437,7 @@ body {
     content: "";
     display: table;
     clear: both; }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 68.75em) {
     .row {
       max-width: 100%;
       width: 100%;
