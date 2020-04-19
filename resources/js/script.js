@@ -50,7 +50,6 @@ $(document).ready(function() {
     $(window).scroll(function() {
         var currentScroll = $(this).scrollTop(),
             contactTop = $('.section-contact').offset().top - 30;
-            console.log(contactTop, currentScroll);
         if (currentScroll > headerBottom) {
             $('.mobile-button__icon').css('fill', '#EE5A24');
         } else {
