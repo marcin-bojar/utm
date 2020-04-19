@@ -69,16 +69,12 @@ $(document).ready(function() {
             $('.mobile-button__icon').css('fill', '#EE5A24');    
     });
 
-    $('.mobile-nav__link').click(function() {
-        $('.mobile-nav').slideToggle(200);
-    });
-
     $('.mobile-nav').click(function() {
         $('.mobile-nav').slideToggle(200);
     });
 
 
-    
+
     // IMAGE POPUP
 
     $('.photo').magnificPopup({
