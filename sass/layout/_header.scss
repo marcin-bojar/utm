@@ -1,5 +1,5 @@
 .header {
-    background-image: linear-gradient(rgba($color-black, .6), rgba($color-black, .6)), url(../../vendors/img/scania-header-min.jpg);
+    background-image: linear-gradient(rgba($color-black, .6), rgba($color-black, .6)), url(../../vendors/img/scania-header-small.jpg);
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
@@ -7,6 +7,16 @@
     height: 100vh;
     color: $color-white;
     position: relative;
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+                           (min-width: 75em) {
+        background-image: linear-gradient(rgba($color-black, .6), rgba($color-black, .6)), url(../../vendors/img/scania-header-mid.jpg);
+    }
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 100em),
+                            (min-width: 125em) {
+        background-image: linear-gradient(rgba($color-black, .6), rgba($color-black, .6)), url(../../vendors/img/scania-header-min.jpg);                        
+    }
     
     &__text-box {
         position: absolute;

@@ -118,9 +118,15 @@
         transition: opacity .2s .2s ease-in;
         white-space: nowrap;
 
+        & br {
+           
+            @include respond(large-h1) {
+                display: none;
+            }
+        }
+
         @include respond(large-h1) {
             white-space: normal;
-            font-size: 1.9rem;
         }
 
         @include respond(medium) {
