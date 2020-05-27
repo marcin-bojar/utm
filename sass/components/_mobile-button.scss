@@ -3,9 +3,14 @@
     top: 3rem;
     right: 2rem;
     z-index: 5000;
+    display: none;
+
+    @include respond(small) {
+        display: block;
+    }
 
     &__icon {
-        display: none;
+        
         fill: #fff;
         height: 6rem;
         width: 6rem;
@@ -13,4 +18,6 @@
         animation: .5s ease-out moveInUp 1.7s;
         animation-fill-mode: backwards;
     }
+
+    
 }

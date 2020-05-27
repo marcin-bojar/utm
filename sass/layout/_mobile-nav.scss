@@ -2,11 +2,12 @@
     background-color: rgba(rgb(14, 14, 14), .95);
     height: 100vh;
     width: 100vw;
-    display: none;
+    transform: translateY(-100%);
     position: fixed;
     z-index: 4999;
 
-    &__logo {
+    & .main-nav__logo-box {
+        display: inline-block;
         position: absolute;
         top: 5rem;
         left: 3.5rem;
@@ -14,22 +15,25 @@
         max-width: 20rem;
     }
     
-    &__list {
+    & .main-nav__list {
         list-style: none;
         position: absolute;
         top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
+        animation: none;
     }
 
-    &__item {
+    & .main-nav__item {
         font-size: 3.5rem;
         font-weight: 400;
         text-align: center;
+        margin: 0 0 1rem 0;
+        display: block;
     }
 
-    &__link:link,
-    &__link:visited {
+    & .main-nav__link:link,
+    & .main-nav__link:visited {
         display: inline-block;
         margin-bottom: 4.5rem;
         color: $color-primary-orange;
@@ -37,5 +41,13 @@
         text-transform: uppercase;
         letter-spacing: .4rem;
         
+        &:hover { border-bottom: none; }
+
+        &:active { transform: translateY(0); }
     }
 }
+
+.mobile-nav.shown {
+    transform: translateY(0);
+}
+

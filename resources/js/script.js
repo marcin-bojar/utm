@@ -65,9 +65,9 @@ $(document).ready(function() {
 
 
     $('.mobile-button__icon').click(function() {
-            $('.mobile-nav').slideToggle(200);
-            $('.mobile-button__icon').css('fill', '#EE5A24');    
-    });
+        $('.mobile-nav').slideToggle(200);
+        $('.mobile-button__icon').css('fill', '#EE5A24');    
+});
 
     $('.mobile-nav').click(function() {
         $('.mobile-nav').slideToggle(200);
