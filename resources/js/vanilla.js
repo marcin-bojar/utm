@@ -2,10 +2,11 @@ const main_nav = document.getElementById('main-nav');
 const mobileBtn = document.getElementById('mobile-button');
 const mobileBtnIcon = document.querySelector('.mobile-button__icon');
 const navLogo = document.querySelector('.main-nav__logo');
+const navList = document.querySelector('.main-nav__list');
 const headerEl = document.querySelector('header');
 const contactEl = document.getElementById('contact');
 
-// Toggle mobile nav button and mobile nav CSS styles on smaller screens
+// Display mobile nav button and mobile nav CSS styles on smaller screens
 function toggleMobileNav() {
     if(window.innerWidth <= 700) {
         main_nav.classList.add('mobile-nav');
@@ -42,11 +43,22 @@ function changeMobileBtnColor() {
         mobileBtnIcon.style.fill = '#EE5A24';
 };
 
+// Function used to show nav animations only when page loaded, not after window resizing ect 
+function resetNavAnimations() {
+    setTimeout(() => {
+        mobileBtnIcon.style.animation = '0';
+        navList.style.animation = '0';
+    }, 3000);      
+}
+
 //Event listeners
 
 //MOBILE NAV
-window.addEventListener('DOMContentLoaded', () => toggleMobileNav() );
-window.addEventListener('DOMContentLoaded', () => setTimeout(mobileBtnIcon.style.animation = '0', 2000));
+window.addEventListener('DOMContentLoaded', () => {
+    toggleMobileNav();
+    resetNavAnimations();
+});
+
 window.addEventListener('resize', () => toggleMobileNav() );
 //Adapt color of mobile button to background
 window.addEventListener('scroll', changeMobileBtnColor);
@@ -59,7 +71,10 @@ mobileBtn.addEventListener('click', () => {
 
 // Close mobile menu when clicked anywhere on the menu
 main_nav.addEventListener('click', () => {
-    if(main_nav.classList.contains('mobile-nav'))
+    if(main_nav.classList.contains('mobile-nav')) {
         main_nav.classList.toggle('shown');
+        changeMobileBtnColor();
+    }
+
 });
 
