@@ -6,6 +6,10 @@
     position: fixed;
     z-index: 4999;
 
+    &.shown {
+        transform: translateY(0);
+    }
+
     & .main-nav__logo-box {
         display: inline-block;
         position: absolute;
@@ -45,9 +49,5 @@
 
         &:active { transform: translateY(0); }
     }
-}
-
-.mobile-nav.shown {
-    transform: translateY(0);
 }
 
