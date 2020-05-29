@@ -5,8 +5,9 @@ const navLogo = document.querySelector('.main-nav__logo');
 const navList = document.querySelector('.main-nav__list');
 const headerEl = document.querySelector('header');
 const contactEl = document.getElementById('contact');
-let previousScroll = 0;
 const headerBottom = headerEl.offsetTop + headerEl.clientHeight - 40;
+let scrolling = true; // flag used to prevent from firing 'scroll' event when resizing window
+let previousScroll = 0; // this variable saves the position on page after last scroll event
 
 // Display mobile nav button and mobile nav CSS styles on smaller screens
 function toggleMobileNav() {
@@ -14,11 +15,14 @@ function toggleMobileNav() {
         main_nav.classList.add('mobile-nav');
         navLogo.setAttribute('src', 'resources/img/logo-orange.svg');
         //Prevent the blink of mobile nav on load
-        setTimeout( () => main_nav.style.transition = 'transform .3s', 300);   
+        setTimeout( () => mainNavTransitionON(), 300);
+        return true; 
     } else {
         main_nav.className = 'main-nav';
         navLogo.setAttribute('src', 'resources/img/logo-black.svg');
-        main_nav.style.transition = 'none';
+        mainNavTransitionOFF();
+        console.log('transition off');
+        return false;
     }
 };
 
@@ -52,38 +56,49 @@ function resetNavAnimations() {
     }, 3000);      
 };
 
+function mainNavTransitionON() {
+    main_nav.style.transition = 'transform .3s';
+};
+
+function mainNavTransitionOFF() {
+    main_nav.style.transition = 'none';
+};
+
 // Display sticky nav when below header and scrolling upwards
 function showStickyNav() {
-    const currentScroll = window.scrollY;
-   
-    // Show sticky nav only below header and on screens bigger than 700px
-    if(currentScroll > headerBottom  && window.innerWidth > 700) {
-        if(!main_nav.classList.contains('sticky-nav'))
-            main_nav.classList.add('sticky-nav');
-
-        // Prevent the blink of sticky nav when its class is added
-        setTimeout(() => main_nav.style.transition = 'transform .3s', 300);
-
-        // If scrolling up show sticky nav 
-        if(currentScroll < previousScroll)
-            main_nav.classList.add('shown');
-        // If scrolling down hide sticky nav
-        else 
+    // 'scrolling' indicates that window is not resized but really scrolled
+    if(scrolling) {
+        const currentScroll = window.scrollY;
+        // Show sticky nav only below header and on screens bigger than 700px
+        if(currentScroll > headerBottom  && window.innerWidth > 700) {
+            if(!main_nav.classList.contains('sticky-nav'))
+                main_nav.classList.add('sticky-nav');
+    
+            // Prevent the blink of sticky nav when its class is added
+            setTimeout(() => mainNavTransitionON(), 300);
+    
+            // If scrolling up show sticky nav 
+            if(currentScroll < previousScroll)
+                main_nav.classList.add('shown');
+            // If scrolling down hide sticky nav
+            else 
+                main_nav.classList.remove('shown');
+    
+        // If not below header or screen smaller than 700px
+        } else {
             main_nav.classList.remove('shown');
-
-    // If not below header or screen smaller than 700px
-    } else {
-        main_nav.classList.remove('shown');
-        if(main_nav.classList.contains('sticky-nav')) {
-            // setTimeout to let the sticky nav hide smoothly when scrooling up onto header
-            setTimeout( () => {
-                main_nav.classList.remove('sticky-nav');
-                main_nav.style.transition = 'none';
-            }, 500);   
-        }      
+            if(main_nav.classList.contains('sticky-nav')) {
+                // setTimeout to let the sticky nav hide smoothly when scrooling up onto header
+                setTimeout( () => {
+                    main_nav.classList.remove('sticky-nav');
+                    mainNavTransitionOFF();
+                }, 500);   
+            }      
+        }
+        // Update the previous scroll variable for next event
+        previousScroll = currentScroll;
     }
-    // Update the previous scroll variable for next event
-    previousScroll = currentScroll;
+    
 };
 
 //Event listeners
@@ -93,7 +108,15 @@ window.addEventListener('DOMContentLoaded', () => {
     resetNavAnimations();
 });
 
-window.addEventListener('resize', toggleMobileNav);
+window.addEventListener('resize', () => {
+    // Dont fire scroll event when window is being resized (prevents blinking of sticky nav)
+    scrolling = false;
+    // Check if mobile nav button and mobile nav styles should be turned on (from 700px width down)
+    toggleMobileNav();
+    // After resizing watch for scroll event again
+    setTimeout(() => scrolling = true, 600);
+});
+
 //Adapt color of mobile button to background
 window.addEventListener('scroll', () => {
     changeMobileBtnColor();
