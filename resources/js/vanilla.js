@@ -5,30 +5,36 @@ const navLogo = document.querySelector('.main-nav__logo');
 const navList = document.querySelector('.main-nav__list');
 const headerEl = document.querySelector('header');
 const contactEl = document.getElementById('contact');
-const headerBottom = headerEl.offsetTop + headerEl.clientHeight - 40;
+const headerBottom = headerEl.offsetTop + headerEl.clientHeight - 50;
+let position = window.scrollY; // scroll position on the page
 let scrolling = true; // flag used to prevent from firing 'scroll' event when resizing window
 let previousScroll = 0; // this variable saves the position on page after last scroll event
 
 // Display mobile nav button and mobile nav CSS styles on smaller screens
 function toggleMobileNav() {
     if(window.innerWidth <= 700) {
+        mainNavTransitionOFF();
+        // Delete sticky-nav styles if present
+        if(main_nav.classList.contains('sticky-nav', 'shown'))
+            main_nav.classList.remove('sticky-nav', 'shown');
+        // Add mobile-nav styles
         main_nav.classList.add('mobile-nav');
+        // Add mobile-nav logo styles
         navLogo.setAttribute('src', 'resources/img/logo-orange.svg');
         //Prevent the blink of mobile nav on load
-        setTimeout( () => mainNavTransitionON(), 300);
-        return true; 
+        setTimeout(() => mainNavTransitionON(), 300);
     } else {
-        main_nav.className = 'main-nav';
-        navLogo.setAttribute('src', 'resources/img/logo-black.svg');
-        mainNavTransitionOFF();
-        console.log('transition off');
-        return false;
+        if(position <= headerBottom)
+            main_nav.className = 'main-nav';
+        else
+            main_nav.className = 'main-nav sticky-nav';
+            navLogo.setAttribute('src', 'resources/img/logo-black.svg');
     }
 };
 
 // Change the color of mobile nav button depending on position on page
 function changeMobileBtnColor() {
-    const position = window.scrollY; 
+    position = window.scrollY; 
     const contactTop = contactEl.offsetTop - 40;
 
     if(position > headerBottom) 
@@ -68,9 +74,9 @@ function mainNavTransitionOFF() {
 function showStickyNav() {
     // 'scrolling' indicates that window is not resized but really scrolled
     if(scrolling) {
-        const currentScroll = window.scrollY;
+        position = window.scrollY;
         // Show sticky nav only below header and on screens bigger than 700px
-        if(currentScroll > headerBottom  && window.innerWidth > 700) {
+        if(position > headerBottom  && window.innerWidth > 700) {
             if(!main_nav.classList.contains('sticky-nav'))
                 main_nav.classList.add('sticky-nav');
     
@@ -78,7 +84,7 @@ function showStickyNav() {
             setTimeout(() => mainNavTransitionON(), 300);
     
             // If scrolling up show sticky nav 
-            if(currentScroll < previousScroll)
+            if(position < previousScroll)
                 main_nav.classList.add('shown');
             // If scrolling down hide sticky nav
             else 
@@ -96,7 +102,7 @@ function showStickyNav() {
             }      
         }
         // Update the previous scroll variable for next event
-        previousScroll = currentScroll;
+        previousScroll = position;
     }
     
 };
@@ -114,7 +120,7 @@ window.addEventListener('resize', () => {
     // Check if mobile nav button and mobile nav styles should be turned on (from 700px width down)
     toggleMobileNav();
     // After resizing watch for scroll event again
-    setTimeout(() => scrolling = true, 600);
+    setTimeout(() => scrolling = true, 700);
 });
 
 //Adapt color of mobile button to background
