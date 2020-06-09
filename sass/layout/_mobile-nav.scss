@@ -45,7 +45,7 @@
         text-transform: uppercase;
         letter-spacing: .4rem;
         
-        &:hover { border-bottom: none; }
+        &:hover::before { transform: scaleX(0) }
 
         &:active { transform: translateY(0); }
     }
