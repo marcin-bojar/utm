@@ -28,6 +28,11 @@
         @media only screen and (max-width: 56.25em) { @content }
     }
 
+    //800px - h4 styling
+    @if $bp == medium-h4 {
+        @media only screen and (max-width: 50em) { @content }
+    }
+
     //700px  
     @if $bp == small {
         @media only screen and (max-width: 43.75em) { @content }

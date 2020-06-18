@@ -16,149 +16,80 @@
                         //linear-gradient(to bottom, rgba($color-grey-light-2, 1) 0%, rgba($color-grey-light-2, .5) 27%, rgba($color-grey-light-2, .0) 40%, rgba($color-grey-light-2, 0) 75%, rgba($color-grey-light-2, 1) 100% ),
 
                         //linear-gradient(to right, rgba($color-grey-light-2, 1) 0%, rgba($color-grey-light-2, .7) 35%,  rgba($color-grey-light-2, .3) 45%, rgba($color-grey-light-2, .3) 55%, rgba($color-grey-light-2, .7) 65%, rgba($color-grey-light-2, 1) 100%);
-    background-size: cover;
-    background-position: top;
-    padding: 10rem 0; 
-    padding-bottom: 10rem;
+    // background-size: cover;
+    // background-position: top;
+    padding: 10rem; 
     text-align: center;
 
     @include respond(largest) {
-        padding: 7rem 0;
+        padding: 7rem;
     }
 
     @include respond(small) {
-        padding: 5rem 0;
+        padding: 5rem;
     }
 }
 
 .where {
-    background-image: linear-gradient(to right bottom, rgba($color-light-green-2, .4), rgba($color-light-green-2, .4)), url(../../vendors/img/map-1.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 60%;
-    margin: 0 auto;
-    padding: 4rem;
-    box-shadow: 0 2rem 4rem rgba($color-black, .2);
-    backface-visibility: hidden;  
-    transition: width .6s ease-out;
-    position: relative;
+    display: flex;
+    flex-direction: column;
 
-    @include respond(largest) {
-        width: 95%;
-        & .where__arrow {
-            opacity: 0;
-            transform: translate(-50%, -50%) scale(0);
-        }
-        & .where__PL {opacity: 1;}
-        & .where__flag {opacity: 1}
-        & .where__paragraph {opacity: 1;}
+    &__PL,
+    &__EU {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;   
     }
 
-    @include respond(large) {
-        padding: 4rem 0;
-     }
+    &__text {
+        font-weight: 300;
+        font-size: 3rem;
 
-     @include respond(smaller) {
-        padding: 2rem 0;
-     }
-
-    &__arrow  {
-        font-size: 8rem;
-        color: $color-primary-orange;
-        width: 20%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: all .2s .1s ease-out;
-        
-    }
-    &__flag {
-        opacity: 0;
-        width: 35%;
-        margin: .7rem;
-        box-shadow: 0 .5rem 1rem rgba($color-black, .4);
-        transition: opacity .4s .3s ease-out;
-        backface-visibility: hidden;
-
-        @include respond(medium) {
-            width: 17%;
-        }
-
-        @include respond(big-phone) {
-            width: 25%;
-        }
-        
-        
-    }
-    &__PL {
-        margin-bottom: 3.2rem;
-        opacity: 0;
-        width: 78%;
-        transition: opacity .4s .3s ease-out;
-
-        @include respond(medium) {
-            width: 55%;
-            margin-bottom: 0;
-        }
-
-        @include respond(big-phone) {
-            width: 65%;
-        }
-
-        @include respond(big-phone) {
-            width: 75%;
-        }
-    }
-
-    &__paragraph {
-        font-weight: 400;
-        opacity: 0;
-        margin-top: 3rem;
-        transition: opacity .2s .2s ease-in;
-        white-space: nowrap;
-
-        & br {
-           
-            @include respond(large-h1) {
-                display: none;
-            }
-        }
-
-        @include respond(large-h1) {
-            white-space: normal;
+        & p {
+            font-style: italic;
         }
 
         @include respond(medium) {
-            
-            font-size: 2.1rem;
-            margin-top: 5rem;
+            font-size: 2.5rem;
         }
 
         @include respond(small) {
-            font-size: 2.2rem;
-        }
-
-        @include respond(smaller) {
             font-size: 2rem;
         }
-    }
 
-    &:hover {
-       // background-image: linear-gradient(to right bottom, rgba($color-light-green-2, .2), rgba($color-light-green-2, .2)), url(../../vendors/img/map-1.jpg);
-        width: 95%;
-        & .where__arrow {
-            opacity: 0;
-            transform: translate(-50%, -50%) scale(0);
+        @include respond(big-phone) {
+            font-size: 1.6rem;
         }
-        & .where__PL {opacity: 1;}
-        & .where__flag {opacity: 1}
-        & .where__paragraph {opacity: 1;}
     }
 
-  & .IE {
-      width: 95%;
-  }
+    &__text.right {
+        text-align: right;
+    }
+
+    &__text.left {
+        text-align: left;
+    }
+
+    &__flag-container {
+        max-width: 45%;
+        text-align: right;
+
+        @include respond(phone) {
+            max-width: 55%;
+        }
+    }
+
+    &__flag {
+        width: 40%;
+        margin: .7rem;
+        box-shadow: 0 .5rem 1rem rgba($color-black, .4);
+    }
+    
+    &__flag--PL {
+        width: 40%;
+        margin-right: 1rem;
+    } 
 }
 
 .section-trucks {
