@@ -113,9 +113,17 @@ function showStickyNav() {
 
 function animateWhereSection() {
     const position = window.scrollY;
-    const firstAnimatationPoint = whereEl.offsetTop - 120;
-    const secondAnimationPoint = whereEl.offsetTop + 350;
+    let firstAnimatationPoint,
+        secondAnimationPoint;
 
+    if(window.innerWidth >=1000) {
+        firstAnimatationPoint = whereEl.offsetTop - 120;
+        secondAnimationPoint = whereEl.offsetTop + 350;
+    } else {
+        firstAnimatationPoint = whereEl.offsetTop - 450;
+        secondAnimationPoint = whereEl.offsetTop - 200;
+    }
+    
     if (position >= firstAnimatationPoint) {
         flagPL.classList.add('animate__animated', 'animate__slideInLeft');
         flagPL.style.opacity = '1';
