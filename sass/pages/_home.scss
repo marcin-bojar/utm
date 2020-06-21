@@ -47,6 +47,7 @@
     &__text {
         font-weight: 300;
         font-size: 3rem;
+        opacity: 0;
 
         & p {
             font-style: italic;
@@ -76,6 +77,7 @@
     &__flag-container {
         max-width: 45%;
         text-align: right;
+        opacity: 0;
 
         @include respond(phone) {
             max-width: 55%;
@@ -89,6 +91,7 @@
     }
     
     &__flag--PL {
+        opacity: 0;
         width: 40%;
         margin-right: 1rem;
     } 

@@ -5,6 +5,11 @@ const navLogo = document.querySelector('.main-nav__logo');
 const navList = document.querySelector('.main-nav__list');
 const headerEl = document.querySelector('header');
 const contactEl = document.getElementById('contact');
+const whereEl = document.getElementById('where');
+const flagPL = document.querySelector('.where__flag--PL');
+const flagEU = document.querySelector('.where__flag-container');
+const whereText1 = document.querySelector('.where__text--1');
+const whereText2 = document.querySelector('.where__text--2');
 const headerBottom = headerEl.offsetTop + headerEl.clientHeight - 50;
 let position = window.scrollY; // scroll position on the page
 let scrolling = true; // flag used to prevent from firing 'scroll' event when resizing window
@@ -103,8 +108,26 @@ function showStickyNav() {
         }
         // Update the previous scroll variable for next event
         previousScroll = position;
+    }   
+};
+
+function animateWhereSection() {
+    const position = window.scrollY;
+    const firstAnimatationPoint = whereEl.offsetTop - 120;
+    const secondAnimationPoint = whereEl.offsetTop + 350;
+
+    if (position >= firstAnimatationPoint) {
+        flagPL.classList.add('animate__animated', 'animate__slideInLeft');
+        flagPL.style.opacity = '1';
+        whereText1.classList.add('animate__animated', 'animate__fadeIn', 'animate__delay-1s');
     }
-    
+
+    if (position >= secondAnimationPoint) {
+        whereText2.classList.add('animate__animated','animate__fadeIn');
+        whereText2.style.opacity = '1';
+        flagEU.classList.add('animate__animated', 'animate__slideInRight', 'animate__delay-1s');
+        flagEU.style.opacity = '1';
+    }
 };
 
 //Event listeners
@@ -127,6 +150,7 @@ window.addEventListener('resize', () => {
 window.addEventListener('scroll', () => {
     changeMobileBtnColor();
     showStickyNav();
+    animateWhereSection();
 });
 
 // Show mobile menu when mobile-nav btn clicked
