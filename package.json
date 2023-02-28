@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/marcin-bojar/utm#readme",
   "devDependencies": {
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "normalize.css": "^8.0.1",
     "autoprefixer": "^9.7.5",
     "concat": "^1.0.3",
